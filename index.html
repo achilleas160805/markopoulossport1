@@ -1,1039 +1,642 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="el" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARKOPOULOS Sports Center | Παιδικά Πάρτυ & Αθλητικές Εγκαταστάσεις, Θέρμη</title>
-<meta name="description" content="Ο κορυφαίος προορισμός για παιδικά πάρτυ, μπάσκετ και οικογενειακή ψυχαγωγία στη Θέρμη Θεσσαλονίκης. Ασφαλείς εξωτερικοί χώροι, επαγγελματίες animators, καφέ & catering.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARKOPOULOS Sports Center | Αθλητισμός & Παιδικά Πάρτυ στη Θέρμη</title>
+  <meta name="description" content="MARKOPOULOS Sports Center στη Θέρμη Θεσσαλονίκης: παιδικά πάρτυ σε ασφαλείς υπαίθριους χώρους, γήπεδα μπάσκετ, ακαδημία NORTH STAR B.C. και café για τους γονείς. Κλείστε το πάρτυ σας σήμερα!" />
+  <meta name="theme-color" content="#0F52BA" />
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts (Greek support) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap&subset=greek" rel="stylesheet" />
 
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-<!-- FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: {
-            DEFAULT: '#0F52BA',
-            50: '#EAF0FB',
-            100: '#D5E1F7',
-            200: '#ABC3EF',
-            300: '#81A5E7',
-            400: '#5787DF',
-            500: '#0F52BA',
-            600: '#0D46A0',
-            700: '#0A3A86',
-            800: '#082D6B',
-            900: '#062051',
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#EEF4FC', 100: '#D6E4F8', 500: '#0F52BA', 600: '#0C4399', 700: '#093375', 900: '#061F47' },
+            accent: { 100: '#D1FAE5', 500: '#10B981', 600: '#059669' },
+            neutral: { 50: '#F9FAFB', 100: '#F3F4F6', 200: '#E5E7EB', 700: '#374151', 900: '#111827' }
           },
-          accent: {
-            DEFAULT: '#10B981',
-            50: '#E7FBF3',
-            100: '#CFF7E7',
-            400: '#34D399',
-            500: '#10B981',
-            600: '#0D9A6B',
-            700: '#0A7C56',
+          fontFamily: {
+            heading: ['Montserrat', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif']
           },
-          neutral: {
-            50: '#F9FAFB',
-            100: '#F3F4F6',
-          }
-        },
-        fontFamily: {
-          heading: ['Montserrat', 'sans-serif'],
-          body: ['Inter', 'sans-serif'],
-        },
-        boxShadow: {
-          'soft': '0 4px 20px -2px rgba(15, 82, 186, 0.08)',
-          'soft-lg': '0 10px 40px -5px rgba(15, 82, 186, 0.15)',
-          'card': '0 2px 12px rgba(0,0,0,0.06)',
-        },
-        animation: {
-          'fade-up': 'fadeUp 0.7s ease-out forwards',
-          'bounce-slow': 'bounce 3s infinite',
-        },
-        keyframes: {
-          fadeUp: {
-            '0%': { opacity: '0', transform: 'translateY(24px)' },
-            '100%': { opacity: '1', transform: 'translateY(0)' },
-          }
+          boxShadow: { soft: '0 10px 40px -12px rgba(15, 82, 186, 0.25)' }
         }
       }
     }
-  }
-</script>
+  </script>
 
-<style>
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; }
-  h1, h2, h3, h4, h5, .font-heading { font-family: 'Montserrat', sans-serif; }
-
-  ::-webkit-scrollbar { width: 10px; }
-  ::-webkit-scrollbar-track { background: #F3F4F6; }
-  ::-webkit-scrollbar-thumb { background: #0F52BA; border-radius: 10px; }
-  ::-webkit-scrollbar-thumb:hover { background: #0A3A86; }
-
-  .hero-gradient {
-    background: linear-gradient(135deg, #062051 0%, #0A3A86 45%, #0F52BA 100%);
-  }
-  .hero-pattern {
-    background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.12) 1.5px, transparent 0);
-    background-size: 28px 28px;
-  }
-  .text-gradient {
-    background: linear-gradient(90deg, #34D399, #10B981);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .card-hover {
-    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
-  }
-  .card-hover:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 45px -10px rgba(15, 82, 186, 0.25);
-  }
-  .btn-shine {
-    position: relative;
-    overflow: hidden;
-  }
-  .btn-shine::after {
-    content: '';
-    position: absolute;
-    top: 0; left: -75%;
-    width: 50%; height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
-    transform: skewX(-25deg);
-    transition: left 0.7s ease;
-  }
-  .btn-shine:hover::after { left: 125%; }
-
-  .section-reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .section-reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .lang-hidden { display: none !important; }
-
-  input:focus, textarea:focus { outline: none; }
-
-  .mobile-safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
-
-  .court-line {
-    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 14px);
-  }
-
-  .star-rating i { color: #F59E0B; }
-
-  .nav-link { position: relative; }
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0; bottom: -4px;
-    width: 0; height: 2px;
-    background: #10B981;
-    transition: width 0.3s ease;
-  }
-  .nav-link:hover::after { width: 100%; }
-
-  .badge-pop {
-    animation: fadeUp 0.6s ease-out forwards;
-  }
-
-  @media (max-width: 767px) {
-    .has-mobile-bar { padding-bottom: 76px; }
-  }
-</style>
+  <style>
+    html { scroll-padding-top: 96px; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Montserrat', system-ui, sans-serif; }
+    .hero-bg {
+      background-image:
+        linear-gradient(135deg, rgba(6, 31, 71, 0.92) 0%, rgba(15, 82, 186, 0.85) 60%, rgba(16, 185, 129, 0.75) 100%),
+        url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1800&q=80');
+      background-size: cover; background-position: center;
+    }
+    .court-lines {
+      background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 80px);
+    }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+    #header.scrolled { box-shadow: 0 6px 24px -10px rgba(0,0,0,0.25); }
+    @media (max-width: 767px) { body { padding-bottom: 72px; } }
+  </style>
 </head>
 
-<body class="bg-neutral-50 text-slate-800 antialiased overflow-x-hidden">
+<body class="bg-neutral-50 text-neutral-900 antialiased">
 
-<!-- ============================= -->
-<!-- TOP ANNOUNCEMENT / INFO BAR   -->
-<!-- ============================= -->
-<div class="bg-primary-900 text-white text-xs sm:text-sm relative z-[60]">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2">
-    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-x-5 gap-y-1.5">
-      <a href="tel:+302310052516" class="flex items-center gap-1.5 hover:text-accent-400 transition-colors font-medium">
-        <i class="fa-solid fa-phone-volume text-accent-400"></i>
-        <span>+30 231 005 2516</span>
-      </a>
-      <span class="hidden md:flex items-center gap-1.5">
-        <i class="fa-solid fa-clock text-accent-400"></i>
-        <span data-el="Καθημερινά από τις 17:00" data-en="Daily from 17:00">Καθημερινά από τις 17:00</span>
-      </span>
-      <span class="hidden lg:flex items-center gap-1.5">
-        <i class="fa-solid fa-location-dot text-accent-400"></i>
-        <span data-el="12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01" data-en="12th km Thessaloniki–Moudania, Thermi 570 01">12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01</span>
-      </span>
-    </div>
-    <div class="flex items-center gap-3">
-      <div class="flex items-center gap-1 bg-white/10 rounded-full p-0.5">
-        <button id="lang-gr" class="lang-btn px-2.5 py-0.5 rounded-full font-bold text-[11px] bg-white text-primary-800 transition-all">GR</button>
-        <button id="lang-en" class="lang-btn px-2.5 py-0.5 rounded-full font-bold text-[11px] text-white/70 hover:text-white transition-all">EN</button>
+  <!-- ===== TOP ANNOUNCEMENT / QUICK-INFO BAR ===== -->
+  <div class="bg-brand-900 text-white text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-1">
+        <a href="tel:+302310052516" class="inline-flex items-center gap-2 hover:text-accent-500 transition">
+          <i class="fa-solid fa-phone text-accent-500"></i><span>+30 231 005 2516</span>
+        </a>
+        <span class="inline-flex items-center gap-2">
+          <i class="fa-regular fa-clock text-accent-500"></i>
+          <span data-en="Daily from 17:00">Καθημερινά από τις 17:00</span>
+        </span>
+        <span class="hidden md:inline-flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-accent-500"></i>
+          <span data-en="12th km Thessaloniki – Moudania, Thermi 570 01">12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01</span>
+        </span>
       </div>
-      <div class="hidden sm:flex items-center gap-1 text-amber-400">
-        <i class="fa-solid fa-star text-xs"></i>
-        <span class="font-semibold text-white">4.7</span>
-        <span class="text-white/60 text-[11px]" data-el="(150+ αξιολογήσεις)" data-en="(150+ reviews)">(150+ αξιολογήσεις)</span>
+      <div class="inline-flex items-center rounded-full bg-white/10 p-0.5" role="group" aria-label="Language switcher">
+        <button type="button" data-lang="el" class="lang-btn px-3 py-1 rounded-full font-semibold bg-accent-500 text-brand-900 transition" aria-pressed="true">GR</button>
+        <button type="button" data-lang="en" class="lang-btn px-3 py-1 rounded-full font-semibold text-white/80 hover:text-white transition" aria-pressed="false">EN</button>
       </div>
     </div>
   </div>
-</div>
 
-<!-- ============================= -->
-<!-- STICKY NAVIGATION HEADER      -->
-<!-- ============================= -->
-<header id="main-nav" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-soft transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-[72px]">
-      <!-- Logo -->
-      <a href="#home" class="flex items-center gap-3 group shrink-0">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-          <i class="fa-solid fa-basketball text-accent-400 text-xl"></i>
-        </div>
-        <div class="leading-tight">
-          <p class="font-heading font-extrabold text-primary-800 text-base sm:text-lg tracking-tight">MARKOPOULOS</p>
-          <p class="text-[10px] sm:text-xs font-semibold text-accent-600 tracking-widest uppercase -mt-0.5">Sports Center</p>
-        </div>
+  <!-- ===== STICKY HEADER ===== -->
+  <header id="header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-200 transition-shadow">
+    <nav class="max-w-7xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between gap-4" aria-label="Main navigation">
+      <a href="#home" class="flex items-center gap-3 shrink-0">
+        <span class="w-10 h-10 rounded-xl bg-brand-500 text-white grid place-items-center text-lg shadow-soft"><i class="fa-solid fa-basketball"></i></span>
+        <span class="leading-tight">
+          <span class="block font-heading font-black text-brand-900 tracking-tight text-base md:text-lg">MARKOPOULOS</span>
+          <span class="block text-[11px] md:text-xs font-semibold tracking-[0.2em] text-accent-600 uppercase">Sports Center</span>
+        </span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-8">
-        <a href="#home" class="nav-link font-semibold text-sm text-slate-700 hover:text-primary-700 transition-colors" data-el="Αρχική" data-en="Home">Αρχική</a>
-        <a href="#parties" class="nav-link font-semibold text-sm text-slate-700 hover:text-primary-700 transition-colors" data-el="Παιδικά Πάρτυ" data-en="Kids Parties">Παιδικά Πάρτυ</a>
-        <a href="#facilities" class="nav-link font-semibold text-sm text-slate-700 hover:text-primary-700 transition-colors" data-el="Αθλητικές Εγκαταστάσεις" data-en="Sports Facilities">Αθλητικές Εγκαταστάσεις</a>
-        <a href="#cafe" class="nav-link font-semibold text-sm text-slate-700 hover:text-primary-700 transition-colors" data-el="Café" data-en="Café">Café</a>
-        <a href="#reviews" class="nav-link font-semibold text-sm text-slate-700 hover:text-primary-700 transition-colors" data-el="Αξιολογήσεις" data-en="Reviews">Αξιολογήσεις</a>
-        <a href="#contact" class="nav-link font-semibold text-sm text-slate-700 hover:text-primary-700 transition-colors" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</a>
-      </nav>
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-semibold text-neutral-700">
+        <li><a href="#home" class="hover:text-brand-500 transition" data-en="Home">Αρχική</a></li>
+        <li><a href="#parties" class="hover:text-brand-500 transition" data-en="Kids' Parties">Παιδικά Πάρτυ</a></li>
+        <li><a href="#facilities" class="hover:text-brand-500 transition" data-en="Sports Facilities">Αθλητικές Εγκαταστάσεις</a></li>
+        <li><a href="#cafe" class="hover:text-brand-500 transition">Café</a></li>
+        <li><a href="#reviews" class="hover:text-brand-500 transition" data-en="Reviews">Αξιολογήσεις</a></li>
+        <li><a href="#contact" class="hover:text-brand-500 transition" data-en="Contact">Επικοινωνία</a></li>
+      </ul>
 
       <div class="flex items-center gap-3">
-        <a href="#parties" class="hidden sm:inline-flex btn-shine items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all">
-          <i class="fa-regular fa-calendar-check"></i>
-          <span data-el="Κάντε Κράτηση" data-en="Book Now">Κάντε Κράτηση</span>
+        <a href="#booking" class="hidden sm:inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-soft transition">
+          <i class="fa-solid fa-calendar-check"></i><span data-en="Book Now">Κάντε Κράτηση</span>
         </a>
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-primary-800 hover:bg-primary-50 transition-colors">
-          <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+        <button id="menuBtn" type="button" class="lg:hidden w-11 h-11 grid place-items-center rounded-xl border border-neutral-200 text-brand-900" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i class="fa-solid fa-bars text-lg"></i>
         </button>
       </div>
-    </div>
-  </div>
-
-  <!-- Mobile Nav Drawer -->
-  <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-slate-100 shadow-lg">
-    <nav class="flex flex-col px-4 py-3">
-      <a href="#home" class="mobile-link py-3 px-2 font-semibold text-slate-700 border-b border-slate-100 flex items-center gap-3"><i class="fa-solid fa-house text-primary-500 w-5"></i><span data-el="Αρχική" data-en="Home">Αρχική</span></a>
-      <a href="#parties" class="mobile-link py-3 px-2 font-semibold text-slate-700 border-b border-slate-100 flex items-center gap-3"><i class="fa-solid fa-cake-candles text-primary-500 w-5"></i><span data-el="Παιδικά Πάρτυ" data-en="Kids Parties">Παιδικά Πάρτυ</span></a>
-      <a href="#facilities" class="mobile-link py-3 px-2 font-semibold text-slate-700 border-b border-slate-100 flex items-center gap-3"><i class="fa-solid fa-basketball text-primary-500 w-5"></i><span data-el="Αθλητικές Εγκαταστάσεις" data-en="Sports Facilities">Αθλητικές Εγκαταστάσεις</span></a>
-      <a href="#cafe" class="mobile-link py-3 px-2 font-semibold text-slate-700 border-b border-slate-100 flex items-center gap-3"><i class="fa-solid fa-mug-saucer text-primary-500 w-5"></i><span data-el="Café" data-en="Café">Café</span></a>
-      <a href="#reviews" class="mobile-link py-3 px-2 font-semibold text-slate-700 border-b border-slate-100 flex items-center gap-3"><i class="fa-solid fa-star text-primary-500 w-5"></i><span data-el="Αξιολογήσεις" data-en="Reviews">Αξιολογήσεις</span></a>
-      <a href="#contact" class="mobile-link py-3 px-2 font-semibold text-slate-700 flex items-center gap-3"><i class="fa-solid fa-location-dot text-primary-500 w-5"></i><span data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</span></a>
-      <a href="#parties" class="mt-3 mb-1 inline-flex justify-center items-center gap-2 bg-accent-500 text-white font-bold text-sm px-5 py-3 rounded-full shadow-md">
-        <i class="fa-regular fa-calendar-check"></i>
-        <span data-el="Κάντε Κράτηση" data-en="Book Now">Κάντε Κράτηση</span>
-      </a>
     </nav>
-  </div>
-</header>
 
-<!-- ============================= -->
-<!-- HERO SECTION                  -->
-<!-- ============================= -->
-<section id="home" class="relative hero-gradient hero-pattern overflow-hidden">
-  <div class="absolute -top-24 -right-24 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 -left-24 w-80 h-80 bg-primary-400/20 rounded-full blur-3xl"></div>
-  <div class="court-line absolute inset-0 opacity-40"></div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-neutral-200 bg-white">
+      <ul class="px-4 py-3 flex flex-col text-base font-semibold text-neutral-700">
+        <li><a href="#home" class="mobile-link block py-3 border-b border-neutral-100" data-en="Home">Αρχική</a></li>
+        <li><a href="#parties" class="mobile-link block py-3 border-b border-neutral-100" data-en="Kids' Parties">Παιδικά Πάρτυ</a></li>
+        <li><a href="#facilities" class="mobile-link block py-3 border-b border-neutral-100" data-en="Sports Facilities">Αθλητικές Εγκαταστάσεις</a></li>
+        <li><a href="#cafe" class="mobile-link block py-3 border-b border-neutral-100">Café</a></li>
+        <li><a href="#reviews" class="mobile-link block py-3 border-b border-neutral-100" data-en="Reviews">Αξιολογήσεις</a></li>
+        <li><a href="#contact" class="mobile-link block py-3" data-en="Contact">Επικοινωνία</a></li>
+        <li class="pt-2"><a href="#booking" class="mobile-link block text-center bg-brand-500 text-white rounded-full py-3" data-en="Book Now">Κάντε Κράτηση</a></li>
+      </ul>
+    </div>
+  </header>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-32">
-    <div class="grid lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-7 text-center lg:text-left">
-        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 animate-fade-up">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-400"></span>
+  <main id="home">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero-bg court-lines text-white">
+      <div class="max-w-7xl mx-auto px-4 py-20 md:py-32 grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 fade-up">
+          <span class="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold backdrop-blur">
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <span data-en="4.7 / 5 on Google · 150+ reviews">4.7 / 5 στο Google · 150+ αξιολογήσεις</span>
           </span>
-          <span class="text-white/90 text-xs sm:text-sm font-semibold tracking-wide" data-el="Ανοιχτά Καθημερινά από τις 17:00" data-en="Open Daily from 17:00">Ανοιχτά Καθημερινά από τις 17:00</span>
+          <h1 class="mt-6 font-heading font-black text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight" data-en="The Top Destination for Sports & Kids' Parties in Thermi!">
+            Ο Κορυφαίος Προορισμός για Αθλητισμό & Παιδικά Πάρτυ στη Θέρμη!
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed" data-en="Safe outdoor playgrounds, modern basketball courts and a cozy café for parents. Everything your family needs — in one place, just 12 km from Thessaloniki.">
+            Ασφαλείς υπαίθριες παιδικές χαρές, σύγχρονα γήπεδα μπάσκετ και ένα ζεστό café για τους γονείς. Όλα όσα χρειάζεται η οικογένειά σας — σε έναν χώρο, μόλις 12 χλμ από τη Θεσσαλονίκη.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#booking" class="inline-flex justify-center items-center gap-2 bg-accent-500 hover:bg-accent-600 text-brand-900 font-bold px-7 py-4 rounded-full text-base shadow-lg transition">
+              <i class="fa-solid fa-cake-candles"></i><span data-en="Book a Party">Κράτηση για Πάρτυ</span>
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=H233%2B25+Thermi" target="_blank" rel="noopener" class="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/40 text-white font-bold px-7 py-4 rounded-full text-base backdrop-blur transition">
+              <i class="fa-solid fa-diamond-turn-right"></i><span data-en="Get Directions">Οδηγίες Χάρτη</span>
+            </a>
+          </div>
+          <ul class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-shield-heart text-accent-500 text-lg"></i><span data-en="Safe Environment">Ασφαλές Περιβάλλον</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-tree text-accent-500 text-lg"></i><span data-en="Outdoor Playgrounds">Υπαίθριες Παιδικές Χαρές</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-basketball text-accent-500 text-lg"></i><span data-en="Basketball Courts">Γήπεδα Μπάσκετ</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-mug-hot text-accent-500 text-lg"></i><span data-en="Family Relaxation">Χαλάρωση για Γονείς</span></li>
+          </ul>
         </div>
 
-        <h1 class="font-heading font-extrabold text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight animate-fade-up" style="animation-delay:0.1s; opacity:0;">
-          <span data-el="Ο Κορυφαίος Προορισμός για" data-en="The Ultimate Destination for">Ο Κορυφαίος Προορισμός για</span>
-          <span class="block text-gradient mt-1" data-el="Αθλητισμό & Παιδικά Πάρτυ" data-en="Sports & Kids' Parties">Αθλητισμό & Παιδικά Πάρτυ</span>
-          <span data-el="στη Θέρμη!" data-en="in Thermi!">στη Θέρμη!</span>
-        </h1>
-
-        <p class="mt-6 text-lg sm:text-xl text-blue-100/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style="animation-delay:0.2s; opacity:0;" data-el="Ασφαλείς εξωτερικές παιδικές χαρές, επαγγελματικά γήπεδα μπάσκετ και χώρος χαλάρωσης για όλη την οικογένεια. Δημιουργήστε αξέχαστες στιγμές με τα παιδιά σας σε ένα περιβάλλον σχεδιασμένο για διασκέδαση και ασφάλεια." data-en="Safe outdoor playgrounds, professional basketball courts and a relaxation area for the whole family. Create unforgettable moments with your kids in an environment designed for fun and safety.">
-          Ασφαλείς εξωτερικές παιδικές χαρές, επαγγελματικά γήπεδα μπάσκετ και χώρος χαλάρωσης για όλη την οικογένεια. Δημιουργήστε αξέχαστες στιγμές με τα παιδιά σας σε ένα περιβάλλον σχεδιασμένο για διασκέδαση και ασφάλεια.
-        </p>
-
-        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-up" style="animation-delay:0.3s; opacity:0;">
-          <a href="#parties" class="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold text-base px-8 py-4 rounded-full shadow-soft-lg hover:-translate-y-0.5 transition-all">
-            <i class="fa-solid fa-gift"></i>
-            <span data-el="Κράτηση για Πάρτυ" data-en="Book a Party">Κράτηση για Πάρτυ</span>
-          </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=H233%2B25+Thermi" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm text-white font-bold text-base px-8 py-4 rounded-full transition-all">
-            <i class="fa-solid fa-diamond-turn-right"></i>
-            <span data-el="Οδηγίες Χάρτη" data-en="Get Directions">Οδηγίες Χάρτη</span>
-          </a>
-        </div>
-
-        <!-- Quick trust row -->
-        <div class="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 animate-fade-up" style="animation-delay:0.4s; opacity:0;">
-          <div class="flex items-center gap-2 text-white/90">
-            <i class="fa-solid fa-shield-heart text-accent-400 text-lg"></i>
-            <span class="text-sm font-semibold" data-el="Ασφαλής Χώρος" data-en="Safe Environment">Ασφαλής Χώρος</span>
-          </div>
-          <div class="flex items-center gap-2 text-white/90">
-            <i class="fa-solid fa-star text-amber-400 text-lg"></i>
-            <span class="text-sm font-semibold">4.7/5 · 150+ Reviews</span>
-          </div>
-          <div class="flex items-center gap-2 text-white/90">
-            <i class="fa-solid fa-tree text-accent-400 text-lg"></i>
-            <span class="text-sm font-semibold" data-el="Εξωτερικός Χώρος" data-en="Outdoor Space">Εξωτερικός Χώρος</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero visual -->
-      <div class="lg:col-span-5 relative animate-fade-up" style="animation-delay:0.3s; opacity:0;">
-        <div class="relative mx-auto max-w-md">
-          <div class="absolute -inset-3 bg-gradient-to-br from-accent-400/30 to-primary-400/30 rounded-[2rem] blur-2xl"></div>
-          <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10 aspect-[4/5]">
-            <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?q=80&w=1000&auto=format&fit=crop" alt="Παιδιά παίζουν μπάσκετ σε εξωτερικό γήπεδο" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary-900/70 via-transparent to-transparent"></div>
-          </div>
-          <!-- Floating card -->
-          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-4 flex items-center gap-3 w-56 badge-pop" style="animation-delay:0.8s; opacity:0;">
-            <div class="w-11 h-11 rounded-full bg-accent-50 flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-people-group text-accent-600 text-lg"></i>
-            </div>
-            <div>
-              <p class="font-heading font-extrabold text-primary-800 text-sm leading-tight" data-el="500+ Πάρτυ" data-en="500+ Parties">500+ Πάρτυ</p>
-              <p class="text-xs text-slate-500" data-el="Οργανώθηκαν με επιτυχία" data-en="Successfully organized">Οργανώθηκαν με επιτυχία</p>
-            </div>
-          </div>
-          <div class="absolute -top-5 -right-5 bg-accent-500 text-white rounded-2xl shadow-xl px-4 py-3 badge-pop" style="animation-delay:1s; opacity:0;">
-            <p class="font-heading font-extrabold text-lg leading-none">4.7 <i class="fa-solid fa-star text-xs align-middle"></i></p>
-            <p class="text-[10px] opacity-90 mt-0.5" data-el="Google Reviews" data-en="Google Reviews">Google Reviews</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Wave divider -->
-  <div class="relative">
-    <svg class="w-full h-auto block" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
-      <path d="M0 40L60 35C120 30 240 20 360 22C480 24 600 38 720 44C840 50 960 48 1080 40C1200 32 1320 18 1380 11L1440 4V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V40Z" fill="#F9FAFB"/>
-    </svg>
-  </div>
-</section>
-
-<!-- ============================= -->
-<!-- KIDS' PARTIES & EVENTS        -->
-<!-- ============================= -->
-<section id="parties" class="section-reveal py-16 sm:py-24 bg-neutral-50 relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-14">
-      <span class="inline-flex items-center gap-2 bg-accent-50 text-accent-700 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full uppercase tracking-wide">
-        <i class="fa-solid fa-cake-candles"></i>
-        <span data-el="Παιδικά Πάρτυ" data-en="Kids' Parties">Παιδικά Πάρτυ</span>
-      </span>
-      <h2 class="mt-5 font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight" data-el="Το Καλύτερο Πάρτυ Γενεθλίων για το Παιδί σας" data-en="The Best Birthday Party for Your Child">
-        Το Καλύτερο Πάρτυ Γενεθλίων για το Παιδί σας
-      </h2>
-      <p class="mt-4 text-slate-600 text-base sm:text-lg" data-el="Εμπιστευτείτε μας τη γιορτή του παιδιού σας. Αναλαμβάνουμε τα πάντα — από το παιχνίδι μέχρι τον καφέ των γονιών — ώστε εσείς να απολαύσετε τη στιγμή." data-en="Trust us with your child's celebration. We handle everything — from playtime to the parents' coffee — so you can enjoy the moment.">
-        Εμπιστευτείτε μας τη γιορτή του παιδιού σας. Αναλαμβάνουμε τα πάντα — από το παιχνίδι μέχρι τον καφέ των γονιών — ώστε εσείς να απολαύσετε τη στιγμή.
-      </p>
-    </div>
-
-    <!-- Trust badges -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16">
-      <div class="card-hover bg-white rounded-2xl shadow-card p-5 sm:p-6 text-center border border-slate-100">
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-primary-50 flex items-center justify-center mb-3">
-          <i class="fa-solid fa-shield-heart text-primary-600 text-2xl"></i>
-        </div>
-        <p class="font-heading font-bold text-slate-800 text-sm sm:text-base" data-el="Ασφαλές Περιβάλλον" data-en="Safe Environment">Ασφαλές Περιβάλλον</p>
-      </div>
-      <div class="card-hover bg-white rounded-2xl shadow-card p-5 sm:p-6 text-center border border-slate-100">
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-accent-50 flex items-center justify-center mb-3">
-          <i class="fa-solid fa-masks-theater text-accent-600 text-2xl"></i>
-        </div>
-        <p class="font-heading font-bold text-slate-800 text-sm sm:text-base" data-el="Επαγγελματίες Animators" data-en="Professional Animators">Επαγγελματίες Animators</p>
-      </div>
-      <div class="card-hover bg-white rounded-2xl shadow-card p-5 sm:p-6 text-center border border-slate-100">
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-50 flex items-center justify-center mb-3">
-          <i class="fa-solid fa-mug-hot text-amber-600 text-2xl"></i>
-        </div>
-        <p class="font-heading font-bold text-slate-800 text-sm sm:text-base" data-el="Άριστος Καφές & Catering" data-en="Great Coffee & Catering">Άριστος Καφές & Catering</p>
-      </div>
-      <div class="card-hover bg-white rounded-2xl shadow-card p-5 sm:p-6 text-center border border-slate-100">
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-sky-50 flex items-center justify-center mb-3">
-          <i class="fa-solid fa-spray-can-sparkles text-sky-600 text-2xl"></i>
-        </div>
-        <p class="font-heading font-bold text-slate-800 text-sm sm:text-base" data-el="100% Καθαρός Χώρος" data-en="100% Clean Space">100% Καθαρός Χώρος</p>
-      </div>
-    </div>
-
-    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-      <!-- Left: Party packages -->
-      <div>
-        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1000&auto=format&fit=crop" alt="Παιδικό πάρτυ με μπαλόνια σε εξωτερικό χώρο" class="w-full h-64 sm:h-80 object-cover rounded-3xl shadow-soft-lg mb-8">
-
-        <div class="space-y-5">
-          <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-card border border-slate-100">
-            <div class="w-12 h-12 shrink-0 rounded-xl bg-primary-600 text-white flex items-center justify-center font-heading font-extrabold text-lg">1</div>
-            <div>
-              <h3 class="font-heading font-bold text-lg text-primary-900" data-el="Εξωτερικό Παιχνίδι Ελεύθερο" data-en="Outdoor Free Play">Εξωτερικό Παιχνίδι Ελεύθερο</h3>
-              <p class="text-slate-600 text-sm mt-1" data-el="Απεριόριστη πρόσβαση σε παιδική χαρά, γήπεδο μπάσκετ και φαρδιούς πράσινους χώρους υπό συνεχή επίβλεψη." data-en="Unlimited access to the playground, basketball court and spacious green areas under continuous supervision.">Απεριόριστη πρόσβαση σε παιδική χαρά, γήπεδο μπάσκετ και φαρδιούς πράσινους χώρους υπό συνεχή επίβλεψη.</p>
-            </div>
-          </div>
-          <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-card border border-slate-100">
-            <div class="w-12 h-12 shrink-0 rounded-xl bg-primary-600 text-white flex items-center justify-center font-heading font-extrabold text-lg">2</div>
-            <div>
-              <h3 class="font-heading font-bold text-lg text-primary-900" data-el="Οργανωμένα Παιχνίδια & Animation" data-en="Organized Games & Animation">Οργανωμένα Παιχνίδια & Animation</h3>
-              <p class="text-slate-600 text-sm mt-1" data-el="Έμπειροι animators κρατούν τα παιδιά ενθουσιασμένα με παιχνίδια, χορό και διαγωνισμούς προσαρμοσμένους στην ηλικία τους." data-en="Experienced animators keep the kids excited with games, dancing and age-appropriate contests.">Έμπειροι animators κρατούν τα παιδιά ενθουσιασμένα με παιχνίδια, χορό και διαγωνισμούς προσαρμοσμένους στην ηλικία τους.</p>
-            </div>
-          </div>
-          <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-card border border-slate-100">
-            <div class="w-12 h-12 shrink-0 rounded-xl bg-primary-600 text-white flex items-center justify-center font-heading font-extrabold text-lg">3</div>
-            <div>
-              <h3 class="font-heading font-bold text-lg text-primary-900" data-el="Catering Φαγητού & Καφέ για Γονείς" data-en="Food Catering & Coffee for Parents">Catering Φαγητού & Καφέ για Γονείς</h3>
-              <p class="text-slate-600 text-sm mt-1" data-el="Πλήρες μενού πάρτυ για τα παιδιά και premium espresso bar ώστε οι γονείς να χαλαρώσουν παρακολουθώντας." data-en="Full party menu for the kids and a premium espresso bar so parents can relax while they watch.">Πλήρες μενού πάρτυ για τα παιδιά και premium espresso bar ώστε οι γονείς να χαλαρώσουν παρακολουθώντας.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Lead form -->
-      <div id="party-form" class="bg-white rounded-3xl shadow-soft-lg p-6 sm:p-8 lg:p-10 border border-slate-100 lg:sticky lg:top-28">
-        <div class="flex items-center gap-3 mb-2">
-          <div class="w-11 h-11 rounded-xl bg-accent-500 flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-paper-plane text-white text-lg"></i>
-          </div>
-          <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-primary-900" data-el="Κλείστε το Πάρτυ σας" data-en="Book Your Party">Κλείστε το Πάρτυ σας</h3>
-        </div>
-        <p class="text-slate-500 text-sm mb-6" data-el="Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε άμεσα μαζί σας." data-en="Fill out the form and we will contact you right away.">Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε άμεσα μαζί σας.</p>
-
-        <form id="lead-form" class="space-y-4">
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-1.5" data-el="Ονοματεπώνυμο" data-en="Full Name">Ονοματεπώνυμο</label>
-            <div class="relative">
-              <i class="fa-regular fa-user absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-              <input type="text" name="name" required placeholder="π.χ. Μαρία Παπαδοπούλου" class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all text-sm">
-            </div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm font-semibold text-slate-700 mb-1.5" data-el="Τηλέφωνο" data-en="Phone">Τηλέφωνο</label>
-              <div class="relative">
-                <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="tel" name="phone" required placeholder="69XX XXX XXX" class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all text-sm">
+        <div class="lg:col-span-5 fade-up">
+          <div class="bg-white text-neutral-900 rounded-3xl p-6 md:p-8 shadow-2xl">
+            <div class="flex items-center gap-3">
+              <span class="w-12 h-12 rounded-2xl bg-accent-100 text-accent-600 grid place-items-center text-xl"><i class="fa-solid fa-bolt"></i></span>
+              <div>
+                <p class="font-heading font-bold text-lg" data-en="Quick Party Enquiry">Γρήγορη Ερώτηση για Πάρτυ</p>
+                <p class="text-sm text-neutral-700" data-en="We reply within a few hours">Απαντάμε μέσα σε λίγες ώρες</p>
               </div>
             </div>
-            <div>
-              <label class="block text-sm font-semibold text-slate-700 mb-1.5" data-el="Επιθυμητή Ημερομηνία" data-en="Desired Date">Επιθυμητή Ημερομηνία</label>
-              <div class="relative">
-                <i class="fa-regular fa-calendar absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="date" name="date" required class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all text-sm text-slate-600">
+            <ul class="mt-6 space-y-3 text-sm">
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent-500 mt-0.5"></i><span data-en="Complete party packages with animators">Ολοκληρωμένα πακέτα πάρτυ με animators</span></li>
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent-500 mt-0.5"></i><span data-en="Food & coffee catering for parents">Catering φαγητού & καφέ για τους γονείς</span></li>
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent-500 mt-0.5"></i><span data-en="Free parking · Easy access from Thessaloniki">Δωρεάν parking · Εύκολη πρόσβαση από Θεσσαλονίκη</span></li>
+            </ul>
+            <div class="mt-6 grid grid-cols-2 gap-3">
+              <a href="tel:+302310052516" class="inline-flex justify-center items-center gap-2 border-2 border-brand-500 text-brand-500 hover:bg-brand-50 font-bold py-3 rounded-xl transition"><i class="fa-solid fa-phone"></i><span data-en="Call">Κλήση</span></a>
+              <a href="#booking" class="inline-flex justify-center items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-xl transition"><i class="fa-solid fa-paper-plane"></i><span data-en="Enquire">Αίτημα</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KIDS' PARTIES ===== -->
+    <section id="parties" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-3xl fade-up">
+          <span class="text-accent-600 font-bold text-sm tracking-widest uppercase" data-en="Kids' Parties & Events">Παιδικά Πάρτυ & Εκδηλώσεις</span>
+          <h2 class="mt-3 font-heading font-extrabold text-3xl md:text-5xl text-brand-900 tracking-tight" data-en="The party your child will remember — and you will enjoy.">
+            Το πάρτυ που θα θυμάται το παιδί σας — και που θα απολαύσετε κι εσείς.
+          </h2>
+          <p class="mt-5 text-lg text-neutral-700 leading-relaxed" data-en="Open-air play in a fully fenced space, professional animators who keep the kids engaged, and freshly prepared food and coffee for the parents. You relax, we take care of everything.">
+            Παιχνίδι στην ύπαιθρο σε πλήρως περιφραγμένο χώρο, επαγγελματίες animators που κρατούν τα παιδιά απασχολημένα, και φρέσκο φαγητό και καφές για τους γονείς. Εσείς χαλαρώνετε, εμείς φροντίζουμε για όλα.
+          </p>
+        </div>
+
+        <!-- Packages -->
+        <div class="mt-14 grid md:grid-cols-3 gap-6">
+          <article class="fade-up rounded-3xl border border-neutral-200 bg-neutral-50 p-7 hover:shadow-soft hover:-translate-y-1 transition">
+            <span class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-500 grid place-items-center text-xl"><i class="fa-solid fa-sun"></i></span>
+            <h3 class="mt-5 font-heading font-bold text-xl text-brand-900" data-en="Outdoor Play">Υπαίθριο Παιχνίδι</h3>
+            <p class="mt-3 text-neutral-700 leading-relaxed" data-en="Large playgrounds, open courts and green areas so kids can run, climb and play safely under supervision.">
+              Μεγάλες παιδικές χαρές, ανοιχτά γήπεδα και χώροι πρασίνου, για να τρέξουν, να σκαρφαλώσουν και να παίξουν τα παιδιά με ασφάλεια και εποπτεία.
+            </p>
+          </article>
+          <article class="fade-up rounded-3xl border-2 border-brand-500 bg-white p-7 shadow-soft relative hover:-translate-y-1 transition">
+            <span class="absolute -top-3 left-6 bg-accent-500 text-brand-900 text-xs font-bold px-3 py-1 rounded-full" data-en="Most Popular">Πιο Δημοφιλές</span>
+            <span class="w-12 h-12 rounded-2xl bg-brand-500 text-white grid place-items-center text-xl"><i class="fa-solid fa-masks-theater"></i></span>
+            <h3 class="mt-5 font-heading font-bold text-xl text-brand-900" data-en="Organized Animators">Οργανωμένοι Animators</h3>
+            <p class="mt-3 text-neutral-700 leading-relaxed" data-en="Team games, treasure hunts, face painting and sports challenges led by experienced, kid-loving animators.">
+              Ομαδικά παιχνίδια, κυνήγι θησαυρού, face painting και αθλητικές δοκιμασίες από έμπειρους animators που αγαπούν τα παιδιά.
+            </p>
+          </article>
+          <article class="fade-up rounded-3xl border border-neutral-200 bg-neutral-50 p-7 hover:shadow-soft hover:-translate-y-1 transition">
+            <span class="w-12 h-12 rounded-2xl bg-accent-100 text-accent-600 grid place-items-center text-xl"><i class="fa-solid fa-utensils"></i></span>
+            <h3 class="mt-5 font-heading font-bold text-xl text-brand-900" data-en="Custom Catering">Catering στα Μέτρα σας</h3>
+            <p class="mt-3 text-neutral-700 leading-relaxed" data-en="Kids' menus, birthday cake service, plus premium coffee, snacks and platters for the adults at the parent lounge.">
+              Παιδικά menu, σερβίρισμα τούρτας, και premium καφές, snacks και πλατό για τους μεγάλους στο parent lounge.
+            </p>
+          </article>
+        </div>
+
+        <!-- Trust badges -->
+        <ul class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 fade-up">
+          <li class="flex items-center gap-3 bg-brand-900 text-white rounded-2xl px-5 py-4"><i class="fa-solid fa-shield-halved text-accent-500 text-2xl"></i><span class="font-semibold text-sm" data-en="Safe Environment">Ασφαλές Περιβάλλον</span></li>
+          <li class="flex items-center gap-3 bg-brand-900 text-white rounded-2xl px-5 py-4"><i class="fa-solid fa-user-group text-accent-500 text-2xl"></i><span class="font-semibold text-sm" data-en="Professional Animators">Επαγγελματίες Animators</span></li>
+          <li class="flex items-center gap-3 bg-brand-900 text-white rounded-2xl px-5 py-4"><i class="fa-solid fa-mug-saucer text-accent-500 text-2xl"></i><span class="font-semibold text-sm" data-en="Great Coffee & Catering">Εξαιρετικός Καφές & Catering</span></li>
+          <li class="flex items-center gap-3 bg-brand-900 text-white rounded-2xl px-5 py-4"><i class="fa-solid fa-broom text-accent-500 text-2xl"></i><span class="font-semibold text-sm" data-en="100% Clean">100% Καθαριότητα</span></li>
+        </ul>
+
+        <!-- Lead form -->
+        <div id="booking" class="mt-16 grid lg:grid-cols-5 gap-8 items-start">
+          <div class="lg:col-span-2 fade-up">
+            <h3 class="font-heading font-extrabold text-2xl md:text-3xl text-brand-900" data-en="Request a party date">Ζητήστε ημερομηνία για το πάρτυ σας</h3>
+            <p class="mt-3 text-neutral-700 leading-relaxed" data-en="Fill in the form and we will call you back to confirm availability and build the perfect package for your party.">
+              Συμπληρώστε τη φόρμα και θα σας καλέσουμε για να επιβεβαιώσουμε τη διαθεσιμότητα και να φτιάξουμε μαζί το ιδανικό πακέτο για το πάρτυ σας.
+            </p>
+            <div class="mt-6 flex items-center gap-4 p-4 rounded-2xl bg-neutral-50 border border-neutral-200">
+              <span class="w-11 h-11 rounded-full bg-accent-100 text-accent-600 grid place-items-center"><i class="fa-solid fa-phone-volume"></i></span>
+              <div class="text-sm">
+                <p class="text-neutral-700" data-en="Prefer to talk? Call us:">Προτιμάτε να μιλήσουμε; Καλέστε μας:</p>
+                <a href="tel:+302310052516" class="font-bold text-brand-500 text-base">+30 231 005 2516</a>
               </div>
             </div>
           </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-1.5" data-el="Αριθμός Παιδιών" data-en="Number of Kids">Αριθμός Παιδιών</label>
-            <div class="relative">
-              <i class="fa-solid fa-children absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-              <input type="number" name="kids" min="1" placeholder="π.χ. 15" class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all text-sm">
+
+          <form id="partyForm" class="lg:col-span-3 fade-up bg-neutral-50 border border-neutral-200 rounded-3xl p-6 md:p-8 grid sm:grid-cols-2 gap-5" novalidate>
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-1.5" data-en="Full Name *">Ονοματεπώνυμο *</label>
+              <input id="name" name="name" type="text" required autocomplete="name" class="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="π.χ. Μαρία Παπαδοπούλου" />
             </div>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-1.5" data-el="Μήνυμα" data-en="Message">Μήνυμα</label>
-            <div class="relative">
-              <i class="fa-regular fa-comment-dots absolute left-4 top-3.5 text-slate-400"></i>
-              <textarea name="message" rows="3" placeholder="Πείτε μας περισσότερα για το πάρτυ που ονειρεύεστε..." class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all text-sm resize-none"></textarea>
+            <div>
+              <label for="phone" class="block text-sm font-semibold mb-1.5" data-en="Phone *">Τηλέφωνο *</label>
+              <input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" class="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="69XXXXXXXX" />
             </div>
-          </div>
-          <button type="submit" class="btn-shine w-full inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white font-bold text-base px-6 py-4 rounded-xl shadow-soft-lg hover:-translate-y-0.5 transition-all">
-            <i class="fa-solid fa-paper-plane"></i>
-            <span data-el="Αποστολή Αιτήματος" data-en="Send Request">Αποστολή Αιτήματος</span>
-          </button>
-          <p class="text-xs text-slate-400 text-center flex items-center justify-center gap-1.5">
-            <i class="fa-solid fa-lock"></i>
-            <span data-el="Τα στοιχεία σας παραμένουν ασφαλή & εμπιστευτικά" data-en="Your details remain safe & confidential">Τα στοιχεία σας παραμένουν ασφαλή & εμπιστευτικά</span>
+            <div>
+              <label for="date" class="block text-sm font-semibold mb-1.5" data-en="Desired Date *">Επιθυμητή Ημερομηνία *</label>
+              <input id="date" name="date" type="date" required class="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+            </div>
+            <div>
+              <label for="kids" class="block text-sm font-semibold mb-1.5" data-en="Number of Kids *">Αριθμός Παιδιών *</label>
+              <input id="kids" name="kids" type="number" min="1" max="200" required inputmode="numeric" class="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="15" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block text-sm font-semibold mb-1.5" data-en="Message">Μήνυμα</label>
+              <textarea id="message" name="message" rows="4" class="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="Ηλικία παιδιών, θέμα πάρτυ, catering, ειδικές ανάγκες..."></textarea>
+            </div>
+            <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
+              <button type="submit" class="inline-flex justify-center items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-full shadow-soft transition">
+                <i class="fa-solid fa-paper-plane"></i><span data-en="Send Request">Αποστολή Αιτήματος</span>
+              </button>
+              <p class="text-xs text-neutral-700" data-en="By sending you agree to be contacted about your request.">Με την αποστολή συμφωνείτε να επικοινωνήσουμε μαζί σας για το αίτημά σας.</p>
+            </div>
+            <p id="formError" class="sm:col-span-2 hidden text-sm font-semibold text-red-600" role="alert" data-en="Please fill in all required fields correctly.">Παρακαλούμε συμπληρώστε σωστά όλα τα υποχρεωτικά πεδία.</p>
+            <div id="formSuccess" class="sm:col-span-2 hidden rounded-2xl bg-accent-100 text-accent-600 p-5 flex items-start gap-3" role="status">
+              <i class="fa-solid fa-circle-check text-2xl mt-0.5"></i>
+              <div>
+                <p class="font-bold" data-en="Thank you! Your request has been received.">Ευχαριστούμε! Το αίτημά σας καταχωρήθηκε.</p>
+                <p class="text-sm" data-en="We will call you shortly to confirm the details.">Θα σας καλέσουμε σύντομα για να επιβεβαιώσουμε τις λεπτομέρειες.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPORTS FACILITIES & NORTH STAR B.C. ===== -->
+    <section id="facilities" class="py-20 md:py-28 bg-neutral-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-3xl fade-up">
+          <span class="text-accent-600 font-bold text-sm tracking-widest uppercase" data-en="Sports Facilities">Αθλητικές Εγκαταστάσεις</span>
+          <h2 class="mt-3 font-heading font-extrabold text-3xl md:text-5xl text-brand-900 tracking-tight" data-en="Modern courts. Real game.">Σύγχρονα γήπεδα. Πραγματικό παιχνίδι.</h2>
+          <p class="mt-5 text-lg text-neutral-700 leading-relaxed" data-en="Well-maintained athletic fields and basketball courts with professional flooring and lighting for training, friendly games and tournaments.">
+            Άριστα συντηρημένα γήπεδα και μπασκέτες με επαγγελματικό δάπεδο και φωτισμό, για προπονήσεις, φιλικούς αγώνες και τουρνουά.
           </p>
-        </form>
+        </div>
 
-        <!-- Success message -->
-        <div id="form-success" class="hidden text-center py-8">
-          <div class="w-16 h-16 mx-auto rounded-full bg-accent-50 flex items-center justify-center mb-4">
-            <i class="fa-solid fa-circle-check text-accent-500 text-3xl"></i>
+        <div class="mt-14 grid lg:grid-cols-3 gap-6">
+          <!-- Facilities cards -->
+          <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+            <article class="fade-up rounded-3xl overflow-hidden bg-white border border-neutral-200 group">
+              <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=900&q=80" alt="Γήπεδο μπάσκετ" class="h-44 w-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-lg text-brand-900" data-en="Basketball Courts">Γήπεδα Μπάσκετ</h3>
+                <p class="mt-2 text-sm text-neutral-700 leading-relaxed" data-en="Full and half courts with night lighting, available for hourly booking and academy training.">Ολόκληρα γήπεδα και half-courts με νυχτερινό φωτισμό, διαθέσιμα για ωριαία κράτηση και προπονήσεις ακαδημίας.</p>
+              </div>
+            </article>
+            <article class="fade-up rounded-3xl overflow-hidden bg-white border border-neutral-200 group">
+              <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=80" alt="Αθλητικό γήπεδο" class="h-44 w-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-lg text-brand-900" data-en="Athletic Fields">Αθλητικά Γήπεδα</h3>
+                <p class="mt-2 text-sm text-neutral-700 leading-relaxed" data-en="Open-air fields for football, team games and party sports challenges — perfect for groups.">Υπαίθρια γήπεδα για ποδόσφαιρο, ομαδικά παιχνίδια και αθλητικές δοκιμασίες πάρτυ — ιδανικά για παρέες.</p>
+              </div>
+            </article>
+            <article class="fade-up rounded-3xl bg-white border border-neutral-200 p-6 flex gap-4">
+              <span class="w-12 h-12 shrink-0 rounded-2xl bg-brand-50 text-brand-500 grid place-items-center text-xl"><i class="fa-solid fa-lightbulb"></i></span>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-brand-900" data-en="Evening Lighting">Βραδινός Φωτισμός</h3>
+                <p class="mt-1 text-sm text-neutral-700 leading-relaxed" data-en="Play after work — the courts are fully lit every evening.">Παίξτε μετά τη δουλειά — τα γήπεδα είναι πλήρως φωτισμένα κάθε βράδυ.</p>
+              </div>
+            </article>
+            <article class="fade-up rounded-3xl bg-white border border-neutral-200 p-6 flex gap-4">
+              <span class="w-12 h-12 shrink-0 rounded-2xl bg-accent-100 text-accent-600 grid place-items-center text-xl"><i class="fa-solid fa-square-parking"></i></span>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-brand-900" data-en="Free Parking & Changing Rooms">Δωρεάν Parking & Αποδυτήρια</h3>
+                <p class="mt-1 text-sm text-neutral-700 leading-relaxed" data-en="Ample parking and clean changing rooms for players and families.">Άνετο parking και καθαρά αποδυτήρια για αθλητές και οικογένειες.</p>
+              </div>
+            </article>
           </div>
-          <h4 class="font-heading font-bold text-xl text-primary-900" data-el="Το αίτημά σας εστάλη!" data-en="Your request was sent!">Το αίτημά σας εστάλη!</h4>
-          <p class="text-slate-500 text-sm mt-2" data-el="Θα επικοινωνήσουμε μαζί σας σύντομα για να οργανώσουμε το τέλειο πάρτυ." data-en="We will contact you soon to organize the perfect party.">Θα επικοινωνήσουμε μαζί σας σύντομα για να οργανώσουμε το τέλειο πάρτυ.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ============================= -->
-<!-- SPORTS FACILITIES + NORTH STAR-->
-<!-- ============================= -->
-<section id="facilities" class="section-reveal py-16 sm:py-24 bg-white relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-14">
-      <span class="inline-flex items-center gap-2 bg-primary-50 text-primary-700 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full uppercase tracking-wide">
-        <i class="fa-solid fa-basketball"></i>
-        <span data-el="Αθλητικές Εγκαταστάσεις" data-en="Sports Facilities">Αθλητικές Εγκαταστάσεις</span>
-      </span>
-      <h2 class="mt-5 font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight" data-el="Σύγχρονα Γήπεδα για Κάθε Ηλικία" data-en="Modern Courts for Every Age">
-        Σύγχρονα Γήπεδα για Κάθε Ηλικία
-      </h2>
-      <p class="mt-4 text-slate-600 text-base sm:text-lg" data-el="Επαγγελματικές αθλητικές εγκαταστάσεις σε έναν πράσινο, φιλόξενο χώρο στην καρδιά της Θέρμης." data-en="Professional sports facilities in a green, welcoming space in the heart of Thermi.">
-        Επαγγελματικές αθλητικές εγκαταστάσεις σε έναν πράσινο, φιλόξενο χώρο στην καρδιά της Θέρμης.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mb-16">
-      <div class="card-hover group relative rounded-3xl overflow-hidden shadow-soft border border-slate-100 h-80">
-        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1000&auto=format&fit=crop" alt="Γήπεδο μπάσκετ εξωτερικού χώρου" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/20 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <i class="fa-solid fa-basketball text-accent-400 text-2xl mb-2"></i>
-          <h3 class="font-heading font-bold text-white text-xl" data-el="Γήπεδα Μπάσκετ" data-en="Basketball Courts">Γήπεδα Μπάσκετ</h3>
-          <p class="text-white/80 text-sm mt-1" data-el="Επαγγελματικά γήπεδα με σύγχρονη επιφάνεια και φωτισμό." data-en="Professional courts with modern flooring and lighting.">Επαγγελματικά γήπεδα με σύγχρονη επιφάνεια και φωτισμό.</p>
-        </div>
-      </div>
-      <div class="card-hover group relative rounded-3xl overflow-hidden shadow-soft border border-slate-100 h-80">
-        <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1000&auto=format&fit=crop" alt="Εξωτερική παιδική χαρά με πράσινο χώρο" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/20 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <i class="fa-solid fa-child-reaching text-accent-400 text-2xl mb-2"></i>
-          <h3 class="font-heading font-bold text-white text-xl" data-el="Παιδικές Χαρές" data-en="Playgrounds">Παιδικές Χαρές</h3>
-          <p class="text-white/80 text-sm mt-1" data-el="Ασφαλείς εξωτερικοί χώροι παιχνιδιού για όλες τις ηλικίες." data-en="Safe outdoor play areas for all ages.">Ασφαλείς εξωτερικοί χώροι παιχνιδιού για όλες τις ηλικίες.</p>
-        </div>
-      </div>
-      <div class="card-hover group relative rounded-3xl overflow-hidden shadow-soft border border-slate-100 h-80">
-        <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?q=80&w=1000&auto=format&fit=crop" alt="Πράσινος χώρος χαλάρωσης οικογενειών" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/20 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <i class="fa-solid fa-umbrella-beach text-accent-400 text-2xl mb-2"></i>
-          <h3 class="font-heading font-bold text-white text-xl" data-el="Χώρος Χαλάρωσης" data-en="Relaxation Area">Χώρος Χαλάρωσης</h3>
-          <p class="text-white/80 text-sm mt-1" data-el="Σκιερές γωνιές και καθιστικά για την οικογένεια." data-en="Shaded corners and seating for the family.">Σκιερές γωνιές και καθιστικά για την οικογένεια.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- NORTH STAR B.C. Spotlight -->
-    <div class="relative rounded-[2rem] overflow-hidden hero-gradient hero-pattern shadow-soft-lg">
-      <div class="absolute -top-16 -right-16 w-72 h-72 bg-accent-500/20 rounded-full blur-3xl"></div>
-      <div class="relative grid lg:grid-cols-2 gap-0 items-center">
-        <div class="p-8 sm:p-10 lg:p-14">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-12 h-12 rounded-xl bg-accent-500 flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-star text-white text-xl"></i>
+          <!-- NORTH STAR B.C. spotlight -->
+          <aside class="fade-up rounded-3xl bg-brand-900 text-white p-8 relative overflow-hidden court-lines">
+            <span class="absolute -right-8 -top-8 text-[160px] text-white/5"><i class="fa-solid fa-star"></i></span>
+            <div class="relative">
+              <span class="inline-flex items-center gap-2 bg-accent-500 text-brand-900 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-star"></i><span data-en="Basketball Academy">Ακαδημία Μπάσκετ</span></span>
+              <h3 class="mt-5 font-heading font-black text-3xl tracking-tight">NORTH STAR B.C.</h3>
+              <p class="mt-3 text-white/80 leading-relaxed" data-en="The basketball academy based at MARKOPOULOS Sports Center. Structured programs for every age and level, from first dribble to competitive play.">
+                Η ακαδημία μπάσκετ που στεγάζεται στο MARKOPOULOS Sports Center. Δομημένα προγράμματα για κάθε ηλικία και επίπεδο, από την πρώτη ντρίμπλα έως τον αγωνιστικό αθλητισμό.
+              </p>
+              <ul class="mt-6 space-y-3 text-sm">
+                <li class="flex gap-3"><i class="fa-solid fa-child-reaching text-accent-500 mt-0.5"></i><span><strong data-en="Mini Basket (5–8)">Mini Basket (5–8 ετών)</strong> · <span data-en="play-based fundamentals">βασικές δεξιότητες μέσα από παιχνίδι</span></span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-people-group text-accent-500 mt-0.5"></i><span><strong data-en="Youth Teams (9–15)">Παιδικά Τμήματα (9–15 ετών)</strong> · <span data-en="technique, tactics & fitness">τεχνική, τακτική & φυσική κατάσταση</span></span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-trophy text-accent-500 mt-0.5"></i><span><strong data-en="Competitive Squads (16+)">Αγωνιστικά Τμήματα (16+)</strong> · <span data-en="league participation">συμμετοχή σε πρωταθλήματα</span></span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-calendar-days text-accent-500 mt-0.5"></i><span data-en="Training daily from 17:00 · Free trial session">Προπονήσεις καθημερινά από 17:00 · Δωρεάν δοκιμαστική προπόνηση</span></li>
+              </ul>
+              <div class="mt-8 grid grid-cols-2 gap-3">
+                <a href="tel:+302310052516" class="inline-flex justify-center items-center gap-2 bg-accent-500 hover:bg-accent-600 text-brand-900 font-bold py-3 rounded-xl transition"><i class="fa-solid fa-phone"></i><span data-en="Call">Κλήση</span></a>
+                <a href="#booking" class="inline-flex justify-center items-center gap-2 border border-white/40 hover:bg-white/10 font-bold py-3 rounded-xl transition"><i class="fa-solid fa-envelope"></i><span data-en="Enquire">Ενημέρωση</span></a>
+              </div>
             </div>
-            <span class="text-accent-400 font-bold text-xs sm:text-sm uppercase tracking-widest" data-el="Ακαδημία Μπάσκετ" data-en="Basketball Academy">Ακαδημία Μπάσκετ</span>
-          </div>
-          <h3 class="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-tight">NORTH STAR B.C.</h3>
-          <p class="mt-4 text-blue-100/90 text-base sm:text-lg leading-relaxed" data-el="Η επίσημη ακαδημία μπάσκετ του κέντρου μας προσφέρει δομημένα προγράμματα εκπαίδευσης για παιδιά και εφήβους κάθε επιπέδου, με έμπειρους προπονητές και σύγχρονη μεθοδολογία." data-en="Our center's official basketball academy offers structured training programs for children and teens of every level, with experienced coaches and a modern methodology.">
-            Η επίσημη ακαδημία μπάσκετ του κέντρου μας προσφέρει δομημένα προγράμματα εκπαίδευσης για παιδιά και εφήβους κάθε επιπέδου, με έμπειρους προπονητές και σύγχρονη μεθοδολογία.
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAFÉ & PARENT LOUNGE ===== -->
+    <section id="cafe" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-up order-2 lg:order-1 grid grid-cols-2 gap-4">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Espresso" class="rounded-3xl h-56 sm:h-72 w-full object-cover" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Café χώρος" class="rounded-3xl h-56 sm:h-72 w-full object-cover mt-8" loading="lazy" />
+        </div>
+        <div class="fade-up order-1 lg:order-2">
+          <span class="text-accent-600 font-bold text-sm tracking-widest uppercase" data-en="Café & Parent Lounge">Café & Parent Lounge</span>
+          <h2 class="mt-3 font-heading font-extrabold text-3xl md:text-5xl text-brand-900 tracking-tight" data-en="Kids play. You enjoy your espresso.">Τα παιδιά παίζουν. Εσείς απολαμβάνετε τον espresso σας.</h2>
+          <p class="mt-5 text-lg text-neutral-700 leading-relaxed" data-en="Our café overlooks the playgrounds and courts, so you can relax with full visibility of the kids. Specialty espresso, fresh juices, snacks and complete party menus for adults.">
+            Το café μας βλέπει στις παιδικές χαρές και τα γήπεδα, ώστε να χαλαρώνετε έχοντας πάντα τα παιδιά στο οπτικό σας πεδίο. Specialty espresso, φρέσκοι χυμοί, snacks και ολοκληρωμένα menu πάρτυ για τους μεγάλους.
           </p>
-
-          <div class="mt-7 grid sm:grid-cols-2 gap-3">
-            <div class="flex items-center gap-2.5 text-white/90 text-sm">
-              <i class="fa-solid fa-circle-check text-accent-400"></i>
-              <span data-el="Τμήματα ανά ηλικία" data-en="Age-based groups">Τμήματα ανά ηλικία</span>
-            </div>
-            <div class="flex items-center gap-2.5 text-white/90 text-sm">
-              <i class="fa-solid fa-circle-check text-accent-400"></i>
-              <span data-el="Πιστοποιημένοι προπονητές" data-en="Certified coaches">Πιστοποιημένοι προπονητές</span>
-            </div>
-            <div class="flex items-center gap-2.5 text-white/90 text-sm">
-              <i class="fa-solid fa-circle-check text-accent-400"></i>
-              <span data-el="Ατομική ανάπτυξη δεξιοτήτων" data-en="Individual skill development">Ατομική ανάπτυξη δεξιοτήτων</span>
-            </div>
-            <div class="flex items-center gap-2.5 text-white/90 text-sm">
-              <i class="fa-solid fa-circle-check text-accent-400"></i>
-              <span data-el="Φιλικοί αγώνες & τουρνουά" data-en="Friendly matches & tournaments">Φιλικοί αγώνες & τουρνουά</span>
-            </div>
-          </div>
-
-          <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="tel:+302310052516" class="btn-shine inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm px-6 py-3.5 rounded-full shadow-lg transition-all">
-              <i class="fa-solid fa-phone"></i>
-              <span data-el="Επικοινωνία με Ακαδημία" data-en="Contact the Academy">Επικοινωνία με Ακαδημία</span>
-            </a>
-            <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-sm px-6 py-3.5 rounded-full transition-all">
-              <span data-el="Μάθετε Περισσότερα" data-en="Learn More">Μάθετε Περισσότερα</span>
-              <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
-          </div>
-        </div>
-        <div class="relative h-64 lg:h-full min-h-[320px]">
-          <img src="https://images.unsplash.com/photo-1608245449230-4ac19066d2d0?q=80&w=1000&auto=format&fit=crop" alt="Προπόνηση μπάσκετ ακαδημίας παιδιών" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-r from-primary-900/60 lg:from-primary-900/40 to-transparent lg:bg-gradient-to-l"></div>
+          <ul class="mt-8 grid sm:grid-cols-2 gap-4">
+            <li class="flex items-start gap-3 p-4 rounded-2xl bg-neutral-50 border border-neutral-200"><i class="fa-solid fa-mug-hot text-brand-500 text-xl mt-0.5"></i><div><p class="font-bold" data-en="Premium Espresso">Premium Espresso</p><p class="text-sm text-neutral-700" data-en="Freddo, cappuccino, filter & more">Freddo, cappuccino, filter & άλλα</p></div></li>
+            <li class="flex items-start gap-3 p-4 rounded-2xl bg-neutral-50 border border-neutral-200"><i class="fa-solid fa-cookie-bite text-brand-500 text-xl mt-0.5"></i><div><p class="font-bold" data-en="Snacks & Sweets">Snacks & Γλυκά</p><p class="text-sm text-neutral-700" data-en="Toasts, pies, cakes, waffles">Τοστ, πίτες, κέικ, βάφλες</p></div></li>
+            <li class="flex items-start gap-3 p-4 rounded-2xl bg-neutral-50 border border-neutral-200"><i class="fa-solid fa-pizza-slice text-brand-500 text-xl mt-0.5"></i><div><p class="font-bold" data-en="Full Party Menus">Πλήρη Menu Πάρτυ</p><p class="text-sm text-neutral-700" data-en="Pizza, burgers, platters, drinks">Πίτσα, burgers, πλατό, ποτά</p></div></li>
+            <li class="flex items-start gap-3 p-4 rounded-2xl bg-neutral-50 border border-neutral-200"><i class="fa-solid fa-couch text-brand-500 text-xl mt-0.5"></i><div><p class="font-bold" data-en="Comfortable Lounge">Άνετο Lounge</p><p class="text-sm text-neutral-700" data-en="Indoor & outdoor seating, free Wi-Fi">Εσωτερικός & εξωτερικός χώρος, free Wi-Fi</p></div></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============================= -->
-<!-- CAFÉ & PARENT LOUNGE          -->
-<!-- ============================= -->
-<section id="cafe" class="section-reveal py-16 sm:py-24 bg-neutral-50 relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="order-2 lg:order-1">
-        <span class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full uppercase tracking-wide">
-          <i class="fa-solid fa-mug-saucer"></i>
-          <span data-el="Café & Χώρος Γονέων" data-en="Café & Parent Lounge">Café & Χώρος Γονέων</span>
-        </span>
-        <h2 class="mt-5 font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight" data-el="Χαλαρώστε Όσο τα Παιδιά Παίζουν" data-en="Relax While the Kids Play">
-          Χαλαρώστε Όσο τα Παιδιά Παίζουν
-        </h2>
-        <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed" data-el="Απολαύστε premium espresso, φρέσκα σνακ και πλήρες μενού πάρτυ σε έναν άνετο χώρο με απευθείας θέα στην παιδική χαρά — έτσι ώστε να χαλαρώνετε με το βλέμμα πάντα στραμμένο στα παιδιά σας." data-en="Enjoy premium espresso, fresh snacks and a full party menu in a comfortable space with direct views of the playground — so you can relax with your eyes always on your kids.">
-          Απολαύστε premium espresso, φρέσκα σνακ και πλήρες μενού πάρτυ σε έναν άνετο χώρο με απευθείας θέα στην παιδική χαρά — έτσι ώστε να χαλαρώνετε με το βλέμμα πάντα στραμμένο στα παιδιά σας.
-        </p>
-
-        <div class="mt-8 grid sm:grid-cols-2 gap-4">
-          <div class="flex items-start gap-3 bg-white p-4 rounded-xl shadow-card border border-slate-100">
-            <i class="fa-solid fa-mug-hot text-amber-500 text-xl mt-0.5"></i>
-            <div>
-              <p class="font-heading font-bold text-slate-800 text-sm" data-el="Premium Espresso Bar" data-en="Premium Espresso Bar">Premium Espresso Bar</p>
-              <p class="text-slate-500 text-xs mt-0.5" data-el="Επιλεγμένος καφές & ροφήματα" data-en="Selected coffee & drinks">Επιλεγμένος καφές & ροφήματα</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 bg-white p-4 rounded-xl shadow-card border border-slate-100">
-            <i class="fa-solid fa-cookie-bite text-amber-500 text-xl mt-0.5"></i>
-            <div>
-              <p class="font-heading font-bold text-slate-800 text-sm" data-el="Φρέσκα Σνακ" data-en="Fresh Snacks">Φρέσκα Σνακ</p>
-              <p class="text-slate-500 text-xs mt-0.5" data-el="Γλυκά & αλμυρές επιλογές" data-en="Sweet & savory options">Γλυκά & αλμυρές επιλογές</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 bg-white p-4 rounded-xl shadow-card border border-slate-100">
-            <i class="fa-solid fa-utensils text-amber-500 text-xl mt-0.5"></i>
-            <div>
-              <p class="font-heading font-bold text-slate-800 text-sm" data-el="Πλήρες Μενού Πάρτυ" data-en="Full Party Menu">Πλήρες Μενού Πάρτυ</p>
-              <p class="text-slate-500 text-xs mt-0.5" data-el="Προσαρμοσμένο στις ανάγκες σας" data-en="Customized to your needs">Προσαρμοσμένο στις ανάγκες σας</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 bg-white p-4 rounded-xl shadow-card border border-slate-100">
-            <i class="fa-solid fa-eye text-amber-500 text-xl mt-0.5"></i>
-            <div>
-              <p class="font-heading font-bold text-slate-800 text-sm" data-el="Θέα στην Παιδική Χαρά" data-en="Playground View">Θέα στην Παιδική Χαρά</p>
-              <p class="text-slate-500 text-xs mt-0.5" data-el="Πάντα με βλέμμα στα παιδιά" data-en="Always in view of the kids">Πάντα με βλέμμα στα παιδιά</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="order-1 lg:order-2 relative">
-        <div class="grid grid-cols-2 gap-4">
-          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Espresso καφές σε φλιτζάνι" class="rounded-2xl shadow-soft w-full h-48 sm:h-56 object-cover mt-8">
-          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=800&auto=format&fit=crop" alt="Χώρος καφέ με άνετα καθίσματα" class="rounded-2xl shadow-soft w-full h-48 sm:h-56 object-cover">
-          <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?q=80&w=800&auto=format&fit=crop" alt="Γλυκά και σνακ πάρτυ" class="rounded-2xl shadow-soft w-full h-48 sm:h-56 object-cover">
-          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=800&auto=format&fit=crop" alt="Γονείς χαλαρώνουν με καφέ" class="rounded-2xl shadow-soft w-full h-48 sm:h-56 object-cover mt-8">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================= -->
-<!-- TESTIMONIALS / SOCIAL PROOF   -->
-<!-- ============================= -->
-<section id="reviews" class="section-reveal py-16 sm:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <span class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full uppercase tracking-wide">
-        <i class="fa-solid fa-star"></i>
-        <span data-el="Αξιολογήσεις" data-en="Reviews">Αξιολογήσεις</span>
-      </span>
-      <h2 class="mt-5 font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight" data-el="Τι Λένε οι Οικογένειές μας" data-en="What Our Families Say">
-        Τι Λένε οι Οικογένειές μας
-      </h2>
-
-      <div class="mt-6 inline-flex items-center gap-3 bg-neutral-50 border border-slate-100 rounded-2xl px-6 py-4 shadow-card">
-        <div class="text-left">
-          <p class="font-heading font-extrabold text-3xl text-primary-900">4.7<span class="text-lg text-slate-400">/5</span></p>
-        </div>
-        <div class="border-l border-slate-200 pl-4">
-          <div class="star-rating flex gap-0.5 text-lg">
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="reviews" class="py-20 md:py-28 bg-brand-900 text-white court-lines">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto fade-up">
+          <div class="inline-flex items-center gap-1 text-yellow-400 text-xl" aria-label="4.7 out of 5 stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
           </div>
-          <p class="text-xs text-slate-500 mt-1" data-el="150+ Αξιολογήσεις Google" data-en="150+ Google Reviews">150+ Αξιολογήσεις Google</p>
+          <h2 class="mt-4 font-heading font-extrabold text-3xl md:text-5xl tracking-tight" data-en="4.7 / 5 stars (150+ Google Reviews)">4.7 / 5 αστέρια (150+ Google Reviews)</h2>
+          <p class="mt-4 text-white/75 text-lg" data-en="Families from all over Thessaloniki trust us for their most special days.">Οικογένειες από όλη τη Θεσσαλονίκη μας εμπιστεύονται για τις πιο ξεχωριστές τους μέρες.</p>
         </div>
-      </div>
-    </div>
 
-    <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
-      <!-- Review 1 -->
-      <div class="card-hover bg-neutral-50 rounded-2xl p-6 sm:p-7 border border-slate-100 shadow-card relative">
-        <i class="fa-solid fa-quote-right text-5xl text-primary-100 absolute top-5 right-5"></i>
-        <div class="star-rating flex gap-0.5 mb-4">
-          <i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i>
-        </div>
-        <p class="text-slate-600 text-sm leading-relaxed relative z-10" data-el="Καταπληκτικός χώρος για παιδικό πάρτυ! Ο χώρος ήταν άψογα καθαρός και οι animators κράτησαν τα παιδιά ενθουσιασμένα για ώρες. Θα το ξανακλείσω σίγουρα!" data-en="Amazing venue for a kids' party! The space was impeccably clean and the animators kept the kids excited for hours. I will definitely book again!">
-          "Καταπληκτικός χώρος για παιδικό πάρτυ! Ο χώρος ήταν άψογα καθαρός και οι animators κράτησαν τα παιδιά ενθουσιασμένα για ώρες. Θα το ξανακλείσω σίγουρα!"
-        </p>
-        <div class="flex items-center gap-3 mt-6">
-          <div class="w-11 h-11 rounded-full bg-primary-100 flex items-center justify-center font-heading font-bold text-primary-700">Ε</div>
-          <div>
-            <p class="font-bold text-slate-800 text-sm">Ελένη Κ.</p>
-            <p class="text-xs text-slate-400" data-el="Μητέρα δύο παιδιών" data-en="Mother of two">Μητέρα δύο παιδιών</p>
-          </div>
-        </div>
-      </div>
-      <!-- Review 2 -->
-      <div class="card-hover bg-neutral-50 rounded-2xl p-6 sm:p-7 border border-slate-100 shadow-card relative">
-        <i class="fa-solid fa-quote-right text-5xl text-primary-100 absolute top-5 right-5"></i>
-        <div class="star-rating flex gap-0.5 mb-4">
-          <i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i>
-        </div>
-        <p class="text-slate-600 text-sm leading-relaxed relative z-10" data-el="Το προσωπικό ήταν εξαιρετικά φιλικό και εξυπηρετικό από την αρχή μέχρι το τέλος. Το φαγητό ήταν νόστιμο και ο καφές πραγματικά υψηλής ποιότητας. Άψογη οργάνωση!" data-en="The staff was extremely friendly and helpful from start to finish. The food was delicious and the coffee genuinely high quality. Flawless organization!">
-          "Το προσωπικό ήταν εξαιρετικά φιλικό και εξυπηρετικό από την αρχή μέχρι το τέλος. Το φαγητό ήταν νόστιμο και ο καφές πραγματικά υψηλής ποιότητας. Άψογη οργάνωση!"
-        </p>
-        <div class="flex items-center gap-3 mt-6">
-          <div class="w-11 h-11 rounded-full bg-accent-100 flex items-center justify-center font-heading font-bold text-accent-700">Γ</div>
-          <div>
-            <p class="font-bold text-slate-800 text-sm">Γιώργος Μ.</p>
-            <p class="text-xs text-slate-400" data-el="Πατέρας" data-en="Father">Πατέρας</p>
-          </div>
+        <div class="mt-14 grid md:grid-cols-3 gap-6">
+          <article class="fade-up bg-white text-neutral-900 rounded-3xl p-7 flex flex-col">
+            <div class="flex items-center gap-1 text-yellow-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="mt-4 text-neutral-700 leading-relaxed flex-1" data-en="“We had our son's 6th birthday here. Everything was spotless, the animators were amazing and the kids didn't stop laughing. The parents actually got to sit down and enjoy their coffee!”">
+              «Κάναμε τα 6α γενέθλια του γιου μας εδώ. Όλα πεντακάθαρα, οι animators φανταστικοί και τα παιδιά δεν σταμάτησαν να γελάνε. Οι γονείς καθίσαμε και απολαύσαμε τον καφέ μας!»
+            </p>
+            <footer class="mt-6 flex items-center gap-3">
+              <span class="w-11 h-11 rounded-full bg-brand-50 text-brand-500 grid place-items-center font-bold">ΕΚ</span>
+              <div><p class="font-bold text-sm">Ελένη Κ.</p><p class="text-xs text-neutral-700"><i class="fa-brands fa-google mr-1"></i><span data-en="Google Review · Party">Google Review · Πάρτυ</span></p></div>
+            </footer>
+          </article>
+          <article class="fade-up bg-white text-neutral-900 rounded-3xl p-7 flex flex-col">
+            <div class="flex items-center gap-1 text-yellow-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="mt-4 text-neutral-700 leading-relaxed flex-1" data-en="“Perfect organization from the first phone call to the cake. Very friendly staff, huge outdoor space and safe for the little ones. Highly recommended for parties!”">
+              «Άψογη οργάνωση από το πρώτο τηλεφώνημα μέχρι την τούρτα. Πολύ ευγενικό προσωπικό, τεράστιος εξωτερικός χώρος και ασφάλεια για τα μικρά. Το συστήνω ανεπιφύλακτα για πάρτυ!»
+            </p>
+            <footer class="mt-6 flex items-center gap-3">
+              <span class="w-11 h-11 rounded-full bg-accent-100 text-accent-600 grid place-items-center font-bold">ΓΠ</span>
+              <div><p class="font-bold text-sm">Γιώργος Π.</p><p class="text-xs text-neutral-700"><i class="fa-brands fa-google mr-1"></i><span data-en="Google Review · Party">Google Review · Πάρτυ</span></p></div>
+            </footer>
+          </article>
+          <article class="fade-up bg-white text-neutral-900 rounded-3xl p-7 flex flex-col">
+            <div class="flex items-center gap-1 text-yellow-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+            <p class="mt-4 text-neutral-700 leading-relaxed flex-1" data-en="“We come every week for my daughter's basketball at North Star. Great coaches, and the café food is genuinely good — the pizza and the freddo are a must.”">
+              «Ερχόμαστε κάθε εβδομάδα για το μπάσκετ της κόρης μου στη North Star. Εξαιρετικοί προπονητές, και το φαγητό στο café είναι πραγματικά ποιοτικό — η πίτσα και ο freddo είναι must.»
+            </p>
+            <footer class="mt-6 flex items-center gap-3">
+              <span class="w-11 h-11 rounded-full bg-brand-50 text-brand-500 grid place-items-center font-bold">ΜΔ</span>
+              <div><p class="font-bold text-sm">Μαρία Δ.</p><p class="text-xs text-neutral-700"><i class="fa-brands fa-google mr-1"></i><span data-en="Google Review · Academy & Café">Google Review · Ακαδημία & Café</span></p></div>
+            </footer>
+          </article>
         </div>
       </div>
-      <!-- Review 3 -->
-      <div class="card-hover bg-neutral-50 rounded-2xl p-6 sm:p-7 border border-slate-100 shadow-card relative">
-        <i class="fa-solid fa-quote-right text-5xl text-primary-100 absolute top-5 right-5"></i>
-        <div class="star-rating flex gap-0.5 mb-4">
-          <i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-regular fa-star text-sm"></i>
-        </div>
-        <p class="text-slate-600 text-sm leading-relaxed relative z-10" data-el="Ο εξωτερικός χώρος είναι υπέροχος και το γήπεδο μπάσκετ πολύ καλά συντηρημένο. Τα παιδιά μας πηγαίνουν κάθε εβδομάδα στην ακαδημία NORTH STAR και είναι ενθουσιασμένα!" data-en="The outdoor space is wonderful and the basketball court is very well maintained. Our kids go to the NORTH STAR academy every week and they are thrilled!">
-          "Ο εξωτερικός χώρος είναι υπέροχος και το γήπεδο μπάσκετ πολύ καλά συντηρημένο. Τα παιδιά μας πηγαίνουν κάθε εβδομάδα στην ακαδημία NORTH STAR και είναι ενθουσιασμένα!"
-        </p>
-        <div class="flex items-center gap-3 mt-6">
-          <div class="w-11 h-11 rounded-full bg-amber-100 flex items-center justify-center font-heading font-bold text-amber-700">Σ</div>
-          <div>
-            <p class="font-bold text-slate-800 text-sm">Σοφία Δ.</p>
-            <p class="text-xs text-slate-400" data-el="Γονέας αθλητή ακαδημίας" data-en="Academy parent">Γονέας αθλητή ακαδημίας</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============================= -->
-<!-- CONTACT & MAP SECTION         -->
-<!-- ============================= -->
-<section id="contact" class="section-reveal py-16 sm:py-24 bg-neutral-50 has-mobile-bar">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-14">
-      <span class="inline-flex items-center gap-2 bg-primary-50 text-primary-700 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full uppercase tracking-wide">
-        <i class="fa-solid fa-location-dot"></i>
-        <span data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</span>
-      </span>
-      <h2 class="mt-5 font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight" data-el="Ελάτε να μας Γνωρίσετε" data-en="Come Meet Us">
-        Ελάτε να μας Γνωρίσετε
-      </h2>
-      <p class="mt-4 text-slate-600 text-base sm:text-lg" data-el="Βρισκόμαστε εύκολα προσβάσιμοι στο 12ο χλμ Θεσσαλονίκης – Μουδανιών, στη Θέρμη." data-en="We are easily accessible at the 12th km Thessaloniki–Moudania, in Thermi.">
-        Βρισκόμαστε εύκολα προσβάσιμοι στο 12ο χλμ Θεσσαλονίκης – Μουδανιών, στη Θέρμη.
-      </p>
-    </div>
-
-    <div class="grid lg:grid-cols-5 gap-8 items-stretch">
-      <!-- Contact info cards -->
-      <div class="lg:col-span-2 flex flex-col gap-5">
-        <div class="bg-white rounded-2xl shadow-card border border-slate-100 p-6 flex items-start gap-4">
-          <div class="w-12 h-12 shrink-0 rounded-xl bg-primary-50 flex items-center justify-center">
-            <i class="fa-solid fa-location-dot text-primary-600 text-xl"></i>
+    <!-- ===== CONTACT & MAP ===== -->
+    <section id="contact" class="py-20 md:py-28 bg-neutral-50">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-5 gap-10">
+        <div class="lg:col-span-2 fade-up">
+          <span class="text-accent-600 font-bold text-sm tracking-widest uppercase" data-en="Contact">Επικοινωνία</span>
+          <h2 class="mt-3 font-heading font-extrabold text-3xl md:text-5xl text-brand-900 tracking-tight" data-en="Come and find us">Ελάτε να μας βρείτε</h2>
+          <ul class="mt-8 space-y-5">
+            <li class="flex gap-4">
+              <span class="w-12 h-12 shrink-0 rounded-2xl bg-white border border-neutral-200 text-brand-500 grid place-items-center text-lg"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <p class="font-bold" data-en="Address">Διεύθυνση</p>
+                <p class="text-neutral-700" data-en="Plot 172, 12th km Thessaloniki – Moudania, Thermi 570 01">Οικόπεδο 172, 12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01</p>
+                <p class="text-xs text-neutral-700 mt-1">Plus Code: <span class="font-mono font-semibold">H233+25 Thermi</span></p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="w-12 h-12 shrink-0 rounded-2xl bg-white border border-neutral-200 text-brand-500 grid place-items-center text-lg"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <p class="font-bold" data-en="Phone">Τηλέφωνο</p>
+                <a href="tel:+302310052516" class="text-brand-500 font-semibold hover:underline">+30 231 005 2516</a>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="w-12 h-12 shrink-0 rounded-2xl bg-white border border-neutral-200 text-brand-500 grid place-items-center text-lg"><i class="fa-regular fa-clock"></i></span>
+              <div>
+                <p class="font-bold" data-en="Opening Hours">Ωράριο</p>
+                <p class="text-neutral-700" data-en="Daily from 17:00">Καθημερινά από τις 17:00</p>
+                <p class="text-sm text-neutral-700" data-en="Weekend parties by appointment (morning slots available)">Πάρτυ Σαββατοκύριακου κατόπιν ραντεβού (διαθέσιμες και πρωινές ώρες)</p>
+              </div>
+            </li>
+          </ul>
+          <div class="mt-8 grid grid-cols-2 gap-3">
+            <a href="tel:+302310052516" class="inline-flex justify-center items-center gap-2 bg-accent-500 hover:bg-accent-600 text-brand-900 font-bold py-4 rounded-full transition"><i class="fa-solid fa-phone"></i><span data-en="Call Now">Καλέστε Τώρα</span></a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=H233%2B25+Thermi" target="_blank" rel="noopener" class="inline-flex justify-center items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 rounded-full transition"><i class="fa-solid fa-diamond-turn-right"></i><span data-en="Get Directions">Οδηγίες</span></a>
           </div>
-          <div>
-            <p class="font-heading font-bold text-slate-800 mb-1" data-el="Διεύθυνση" data-en="Address">Διεύθυνση</p>
-            <p class="text-slate-500 text-sm" data-el="Οικόπεδο 172, 12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01" data-en="Plot 172, 12th km Thessaloniki–Moudania, Thermi 570 01">Οικόπεδο 172, 12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl shadow-card border border-slate-100 p-6 flex items-start gap-4">
-          <div class="w-12 h-12 shrink-0 rounded-xl bg-accent-50 flex items-center justify-center">
-            <i class="fa-solid fa-phone text-accent-600 text-xl"></i>
-          </div>
-          <div>
-            <p class="font-heading font-bold text-slate-800 mb-1" data-el="Τηλέφωνο" data-en="Phone">Τηλέφωνο</p>
-            <a href="tel:+302310052516" class="text-primary-600 font-semibold text-sm hover:underline">+30 231 005 2516</a>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl shadow-card border border-slate-100 p-6 flex items-start gap-4">
-          <div class="w-12 h-12 shrink-0 rounded-xl bg-amber-50 flex items-center justify-center">
-            <i class="fa-solid fa-clock text-amber-600 text-xl"></i>
-          </div>
-          <div>
-            <p class="font-heading font-bold text-slate-800 mb-1" data-el="Ωράριο Λειτουργίας" data-en="Opening Hours">Ωράριο Λειτουργίας</p>
-            <p class="text-slate-500 text-sm" data-el="Καθημερινά από τις 17:00" data-en="Daily from 17:00">Καθημερινά από τις 17:00</p>
+          <div class="mt-6 flex items-center gap-3 text-neutral-700">
+            <a href="#" class="w-10 h-10 rounded-full bg-white border border-neutral-200 grid place-items-center hover:text-brand-500 transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white border border-neutral-200 grid place-items-center hover:text-brand-500 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white border border-neutral-200 grid place-items-center hover:text-brand-500 transition" aria-label="Google"><i class="fa-brands fa-google"></i></a>
           </div>
         </div>
 
-        <div class="mt-2 grid grid-cols-2 gap-4">
-          <a href="tel:+302310052516" class="btn-shine inline-flex flex-col items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white font-bold text-sm px-4 py-5 rounded-2xl shadow-soft transition-all text-center">
-            <i class="fa-solid fa-phone text-xl"></i>
-            <span data-el="Κλήση Τώρα" data-en="Call Now">Κλήση Τώρα</span>
-          </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=H233%2B25+Thermi" target="_blank" rel="noopener" class="btn-shine inline-flex flex-col items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm px-4 py-5 rounded-2xl shadow-soft transition-all text-center">
-            <i class="fa-solid fa-diamond-turn-right text-xl"></i>
-            <span data-el="Οδηγίες" data-en="Directions">Οδηγίες</span>
-          </a>
+        <div class="lg:col-span-3 fade-up rounded-3xl overflow-hidden border border-neutral-200 shadow-soft min-h-[380px]">
+          <iframe
+            title="MARKOPOULOS Sports Center στον χάρτη"
+            src="https://maps.google.com/maps?q=Plot%20172%2C%2012th%20km%20Thessaloniki%E2%80%93Moudania%2C%20Thermi%20570%2001&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            class="w-full h-full min-h-[380px]"
+            style="border:0"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Map -->
-      <div class="lg:col-span-3 rounded-3xl overflow-hidden shadow-soft-lg border border-slate-100 min-h-[400px] bg-white">
-        <iframe
-          src="https://www.google.com/maps?q=Plot+172,+12th+km+Thessaloniki-Moudania,+Thermi+570+01&output=embed"
-          width="100%"
-          height="100%"
-          style="border:0; min-height:400px;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Χάρτης τοποθεσίας MARKOPOULOS Sports Center">
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================= -->
-<!-- FOOTER                        -->
-<!-- ============================= -->
-<footer class="bg-primary-950 bg-primary-900 text-white pt-14 pb-8 has-mobile-bar">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
-      <div class="sm:col-span-2 lg:col-span-1">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-            <i class="fa-solid fa-basketball text-accent-400"></i>
-          </div>
-          <p class="font-heading font-extrabold text-lg">MARKOPOULOS</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-brand-900 text-white/80">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-brand-500 text-white grid place-items-center"><i class="fa-solid fa-basketball"></i></span>
+          <span class="font-heading font-black text-white">MARKOPOULOS <span class="text-accent-500">Sports Center</span></span>
         </div>
-        <p class="text-white/60 text-sm leading-relaxed" data-el="Ο κορυφαίος προορισμός για αθλητισμό και παιδικά πάρτυ στη Θέρμη Θεσσαλονίκης." data-en="The ultimate destination for sports and kids' parties in Thermi, Thessaloniki.">
-          Ο κορυφαίος προορισμός για αθλητισμό και παιδικά πάρτυ στη Θέρμη Θεσσαλονίκης.
-        </p>
-        <div class="flex items-center gap-3 mt-5">
-          <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-accent-500 flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f text-sm"></i></a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-accent-500 flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-accent-500 flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok text-sm"></i></a>
-        </div>
+        <p class="mt-4 text-sm leading-relaxed" data-en="Sports, kids' parties and family relaxation in Thermi, Thessaloniki.">Αθλητισμός, παιδικά πάρτυ και οικογενειακή χαλάρωση στη Θέρμη Θεσσαλονίκης.</p>
       </div>
       <div>
-        <p class="font-heading font-bold mb-4" data-el="Γρήγοροι Σύνδεσμοι" data-en="Quick Links">Γρήγοροι Σύνδεσμοι</p>
-        <ul class="space-y-2.5 text-sm text-white/60">
-          <li><a href="#home" class="hover:text-accent-400 transition-colors" data-el="Αρχική" data-en="Home">Αρχική</a></li>
-          <li><a href="#parties" class="hover:text-accent-400 transition-colors" data-el="Παιδικά Πάρτυ" data-en="Kids Parties">Παιδικά Πάρτυ</a></li>
-          <li><a href="#facilities" class="hover:text-accent-400 transition-colors" data-el="Αθλητικές Εγκαταστάσεις" data-en="Sports Facilities">Αθλητικές Εγκαταστάσεις</a></li>
-          <li><a href="#cafe" class="hover:text-accent-400 transition-colors" data-el="Café" data-en="Café">Café</a></li>
+        <p class="font-bold text-white" data-en="Quick Links">Γρήγοροι Σύνδεσμοι</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#parties" class="hover:text-accent-500" data-en="Kids' Parties">Παιδικά Πάρτυ</a></li>
+          <li><a href="#facilities" class="hover:text-accent-500" data-en="Sports Facilities">Αθλητικές Εγκαταστάσεις</a></li>
+          <li><a href="#facilities" class="hover:text-accent-500">NORTH STAR B.C.</a></li>
+          <li><a href="#cafe" class="hover:text-accent-500">Café</a></li>
+          <li><a href="#contact" class="hover:text-accent-500" data-en="Contact">Επικοινωνία</a></li>
         </ul>
       </div>
       <div>
-        <p class="font-heading font-bold mb-4" data-el="Υπηρεσίες" data-en="Services">Υπηρεσίες</p>
-        <ul class="space-y-2.5 text-sm text-white/60">
-          <li><span data-el="Παιδικά Πάρτυ" data-en="Kids' Parties">Παιδικά Πάρτυ</span></li>
-          <li><span data-el="NORTH STAR B.C. Ακαδημία" data-en="NORTH STAR B.C. Academy">NORTH STAR B.C. Ακαδημία</span></li>
-          <li><span data-el="Ενοικίαση Γηπέδων" data-en="Court Rentals">Ενοικίαση Γηπέδων</span></li>
-          <li><span data-el="Café & Catering" data-en="Café & Catering">Café & Catering</span></li>
-        </ul>
-      </div>
-      <div>
-        <p class="font-heading font-bold mb-4" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</p>
-        <ul class="space-y-3 text-sm text-white/60">
-          <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-accent-400"></i><span data-el="12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01" data-en="12th km Thessaloniki–Moudania, Thermi 570 01">12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01</span></li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-accent-400"></i><a href="tel:+302310052516" class="hover:text-accent-400 transition-colors">+30 231 005 2516</a></li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-accent-400"></i><span data-el="Καθημερινά από τις 17:00" data-en="Daily from 17:00">Καθημερινά από τις 17:00</span></li>
+        <p class="font-bold text-white" data-en="Contact">Επικοινωνία</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="tel:+302310052516" class="hover:text-accent-500"><i class="fa-solid fa-phone mr-2 text-accent-500"></i>+30 231 005 2516</a></li>
+          <li><i class="fa-solid fa-location-dot mr-2 text-accent-500"></i><span data-en="12th km Thessaloniki – Moudania, Thermi 570 01">12ο χλμ Θεσσαλονίκης – Μουδανιών, Θέρμη 570 01</span></li>
+          <li><i class="fa-regular fa-clock mr-2 text-accent-500"></i><span data-en="Daily from 17:00">Καθημερινά από τις 17:00</span></li>
         </ul>
       </div>
     </div>
-    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
-      <p>&copy; <span id="year"></span> MARKOPOULOS Sports Center. <span data-el="Με επιφύλαξη παντός δικαιώματος." data-en="All rights reserved.">Με επιφύλαξη παντός δικαιώματος.</span></p>
-      <p data-el="Σχεδιάστηκε με ❤️ στη Θέρμη" data-en="Designed with ❤️ in Thermi">Σχεδιάστηκε με ❤️ στη Θέρμη</p>
+    <div class="border-t border-white/10">
+      <p class="max-w-7xl mx-auto px-4 py-5 text-xs text-center">© <span id="year"></span> MARKOPOULOS Sports Center. <span data-en="All rights reserved.">Με επιφύλαξη παντός δικαιώματος.</span></p>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE BOTTOM BAR ===== -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-neutral-200 shadow-[0_-8px_24px_-12px_rgba(0,0,0,0.25)]">
+    <div class="grid grid-cols-2 gap-2 p-2">
+      <a href="tel:+302310052516" class="inline-flex justify-center items-center gap-2 bg-accent-500 text-brand-900 font-bold py-3.5 rounded-xl active:scale-95 transition">
+        <i class="fa-solid fa-phone"></i><span data-en="Call Now">Κλήση Τώρα</span>
+      </a>
+      <a href="#booking" class="inline-flex justify-center items-center gap-2 bg-brand-500 text-white font-bold py-3.5 rounded-xl active:scale-95 transition">
+        <i class="fa-solid fa-cake-candles"></i><span data-en="Book Party">Κράτηση Πάρτυ</span>
+      </a>
     </div>
   </div>
-</footer>
 
-<!-- ============================= -->
-<!-- MOBILE STICKY BOTTOM BAR      -->
-<!-- ============================= -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] mobile-safe-bottom">
-  <div class="grid grid-cols-2 gap-2 p-2.5">
-    <a href="tel:+302310052516" class="flex items-center justify-center gap-2 bg-primary-700 text-white font-bold text-sm py-3.5 rounded-xl active:scale-95 transition-transform">
-      <i class="fa-solid fa-phone"></i>
-      <span data-el="Κλήση Τώρα" data-en="Call Now">Κλήση Τώρα</span>
-    </a>
-    <a href="#parties" class="flex items-center justify-center gap-2 bg-accent-500 text-white font-bold text-sm py-3.5 rounded-xl active:scale-95 transition-transform">
-      <i class="fa-solid fa-gift"></i>
-      <span data-el="Κράτηση Πάρτυ" data-en="Book Party">Κράτηση Πάρτυ</span>
-    </a>
-  </div>
-</div>
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    (function () {
+      // ---- Language switcher (GR | EN) ----
+      const i18nNodes = document.querySelectorAll('[data-en]');
+      i18nNodes.forEach(el => { el.dataset.el = el.textContent.trim(); });
 
-<!-- Back to top button -->
-<button id="back-to-top" class="hidden fixed bottom-24 md:bottom-8 right-5 z-40 w-11 h-11 rounded-full bg-primary-700 hover:bg-primary-800 text-white shadow-lg items-center justify-center transition-all">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
+      const placeholders = {
+        name:    { el: 'π.χ. Μαρία Παπαδοπούλου', en: 'e.g. Maria Papadopoulou' },
+        message: { el: 'Ηλικία παιδιών, θέμα πάρτυ, catering, ειδικές ανάγκες...', en: 'Kids\' ages, party theme, catering, special needs...' }
+      };
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-  // ---------- Year ----------
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // ---------- Mobile menu toggle ----------
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = document.getElementById('menu-icon');
-
-  menuBtn.addEventListener('click', function () {
-    mobileMenu.classList.toggle('hidden');
-    const isOpen = !mobileMenu.classList.contains('hidden');
-    menuIcon.classList.toggle('fa-bars', !isOpen);
-    menuIcon.classList.toggle('fa-xmark', isOpen);
-  });
-
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      menuIcon.classList.remove('fa-xmark');
-      menuIcon.classList.add('fa-bars');
-    });
-  });
-
-  // ---------- Sticky nav shadow on scroll ----------
-  const nav = document.getElementById('main-nav');
-  const backToTop = document.getElementById('back-to-top');
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 20) {
-      nav.classList.add('shadow-soft-lg');
-    } else {
-      nav.classList.remove('shadow-soft-lg');
-    }
-    if (window.scrollY > 500) {
-      backToTop.classList.remove('hidden');
-      backToTop.classList.add('flex');
-    } else {
-      backToTop.classList.add('hidden');
-      backToTop.classList.remove('flex');
-    }
-  });
-
-  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-  // ---------- Smooth scroll offset for sticky header ----------
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId.length > 1) {
-        const target = document.querySelector(targetId);
-        if (target) {
-          e.preventDefault();
-          const offset = 110;
-          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
+      function setLang(lang) {
+        i18nNodes.forEach(el => { el.textContent = el.dataset[lang] || el.dataset.el; });
+        Object.keys(placeholders).forEach(id => {
+          const field = document.getElementById(id);
+          if (field) field.placeholder = placeholders[id][lang];
+        });
+        document.documentElement.lang = lang;
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          const active = btn.dataset.lang === lang;
+          btn.classList.toggle('bg-accent-500', active);
+          btn.classList.toggle('text-brand-900', active);
+          btn.classList.toggle('text-white/80', !active);
+          btn.setAttribute('aria-pressed', String(active));
+        });
+        try { localStorage.setItem('msc-lang', lang); } catch (e) {}
       }
-    });
-  });
 
-  // ---------- Scroll reveal animation ----------
-  const revealEls = document.querySelectorAll('.section-reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => setLang(btn.dataset.lang));
+      });
+
+      let saved = 'el';
+      try { saved = localStorage.getItem('msc-lang') || 'el'; } catch (e) {}
+      if (saved === 'en') setLang('en');
+
+      // ---- Mobile menu ----
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = menuBtn.querySelector('i');
+      function closeMenu() {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.className = 'fa-solid fa-bars text-lg';
       }
-    });
-  }, { threshold: 0.08 });
-  revealEls.forEach(el => revealObserver.observe(el));
+      menuBtn.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('hidden') === false;
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuIcon.className = open ? 'fa-solid fa-xmark text-lg' : 'fa-solid fa-bars text-lg';
+      });
+      document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', closeMenu));
 
-  // ---------- Language switcher (GR | EN) ----------
-  const langGrBtn = document.getElementById('lang-gr');
-  const langEnBtn = document.getElementById('lang-en');
-  const elements = document.querySelectorAll('[data-el][data-en]');
-  const htmlTag = document.documentElement;
+      // ---- Header shadow on scroll ----
+      const header = document.getElementById('header');
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
-  function setLanguage(lang) {
-    elements.forEach(el => {
-      el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-el');
-    });
-    htmlTag.setAttribute('lang', lang === 'en' ? 'en' : 'el');
+      // ---- Scroll reveal ----
+      const revealEls = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
+      } else {
+        revealEls.forEach(el => el.classList.add('visible'));
+      }
 
-    if (lang === 'en') {
-      langEnBtn.classList.add('bg-white', 'text-primary-800');
-      langEnBtn.classList.remove('text-white/70');
-      langGrBtn.classList.remove('bg-white', 'text-primary-800');
-      langGrBtn.classList.add('text-white/70');
-    } else {
-      langGrBtn.classList.add('bg-white', 'text-primary-800');
-      langGrBtn.classList.remove('text-white/70');
-      langEnBtn.classList.remove('bg-white', 'text-primary-800');
-      langEnBtn.classList.add('text-white/70');
-    }
-    localStorage.setItem('msc-lang', lang);
-  }
+      // ---- Lead form ----
+      const form = document.getElementById('partyForm');
+      const formError = document.getElementById('formError');
+      const formSuccess = document.getElementById('formSuccess');
+      const dateInput = document.getElementById('date');
+      if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
 
-  langGrBtn.addEventListener('click', () => setLanguage('gr'));
-  langEnBtn.addEventListener('click', () => setLanguage('en'));
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        formError.classList.add('hidden');
+        formSuccess.classList.add('hidden');
 
-  // Restore saved preference (optional, non-blocking)
-  try {
-    const saved = localStorage.getItem('msc-lang');
-    if (saved === 'en') setLanguage('en');
-  } catch (e) { /* localStorage unavailable — ignore */ }
+        const name = form.name.value.trim();
+        const phone = form.phone.value.replace(/\s+/g, '');
+        const date = form.date.value;
+        const kids = parseInt(form.kids.value, 10);
+        const phoneOk = /^(\+30)?\d{10}$/.test(phone);
 
-  // ---------- Lead form submission (demo handler) ----------
-  const leadForm = document.getElementById('lead-form');
-  const formSuccess = document.getElementById('form-success');
+        let valid = true;
+        [form.name, form.phone, form.date, form.kids].forEach(f => f.classList.remove('ring-2', 'ring-red-500'));
+        if (!name) { form.name.classList.add('ring-2', 'ring-red-500'); valid = false; }
+        if (!phoneOk) { form.phone.classList.add('ring-2', 'ring-red-500'); valid = false; }
+        if (!date) { form.date.classList.add('ring-2', 'ring-red-500'); valid = false; }
+        if (!kids || kids < 1) { form.kids.classList.add('ring-2', 'ring-red-500'); valid = false; }
 
-  leadForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+        if (!valid) { formError.classList.remove('hidden'); return; }
 
-    const submitBtn = leadForm.querySelector('button[type="submit"]');
-    const originalHTML = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>' + (document.documentElement.lang === 'en' ? 'Sending...' : 'Αποστολή...') + '</span>';
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.classList.add('opacity-70', 'cursor-not-allowed');
 
-    // Simulate network request — replace with real endpoint integration as needed
-    setTimeout(function () {
-      leadForm.classList.add('hidden');
-      formSuccess.classList.remove('hidden');
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalHTML;
-    }, 900);
-  });
+        // Simulated submission — replace with your backend / email endpoint.
+        setTimeout(() => {
+          formSuccess.classList.remove('hidden');
+          form.reset();
+          btn.disabled = false;
+          btn.classList.remove('opacity-70', 'cursor-not-allowed');
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 800);
+      });
 
-  // Set today's date as min for date input
-  const dateInput = leadForm.querySelector('input[name="date"]');
-  if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
-  }
-
-});
-</script>
-
+      // ---- Footer year ----
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
